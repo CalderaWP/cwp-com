@@ -43,6 +43,7 @@
     "wpackagist-plugin/json-rest-api"                           : "*",
     "pods-framework/pods-deploy"                                : "*",
     "pods-framework/pods-json-api"                              : "*",
+    "wpackagist-plugin/easy-digital-downloads"                  : "*",
     "wpackagist-plugin/log-viewer"                              : "*",
     "wpackagist-plugin/caldera-forms"                           : "*",
     "wpackagist-theme/twentyfifteen"                            : "*",
