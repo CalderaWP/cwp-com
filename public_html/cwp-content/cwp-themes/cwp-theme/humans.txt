@@ -1,0 +1,17 @@
+/* TEAM */
+	Developer: Josh Pollock
+	Contact:   Josh@JoshPress.net
+	URI:       http://JoshPress.net
+
+/* THANKS */
+	Template Design: 10up
+	URI:             http://10up.com
+	Twitter:         @10up
+	
+	Template Design: Eric Mann
+	URI:             http://eamann.com
+	Twitter:         @ericmann
+	
+/* SITE */
+	Created:  2015-01-07
+	Template: https://github.com/10up/grunt-wp-theme

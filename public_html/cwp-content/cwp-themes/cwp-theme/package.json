@@ -1,0 +1,24 @@
+{
+  "name": "cwp-theme",
+  "title": "CWP Theme",
+  "description": "Theme for calderawp.com",
+  "version": "0.1.0",
+  "homepage": "http://CalderaWP.com",
+  "author": {
+    "name": "Josh Pollock",
+    "email": "Josh@JoshPress.net",
+    "url": "http://JoshPress.net"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "matchdep": "~0.1.2",
+    "grunt-contrib-concat": "~0.1.2",
+    "grunt-contrib-uglify": "~0.1.1",
+    "grunt-contrib-cssmin": "~0.6.0",
+    "grunt-contrib-jshint": "~0.1.1",
+    "grunt-contrib-nodeunit": "~0.1.2",
+    "grunt-contrib-watch": "~0.2.0",
+    "grunt-contrib-sass": "~0.7.3"
+  },
+  "keywords": []
+}
