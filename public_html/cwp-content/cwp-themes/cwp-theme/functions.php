@@ -45,8 +45,15 @@ define( 'CWP_THEME_VERSION', '0.1.0' );
 	wp_enqueue_script( 'cwp_theme', get_template_directory_uri() . "/assets/js/cwp_theme{$postfix}.js", array(), CWP_THEME_VERSION, true );
 		
 	wp_enqueue_style( 'cwp_theme', get_template_directory_uri() . "/assets/css/cwp_theme{$postfix}.css", array(), CWP_THEME_VERSION );
+
+    wp_deregister_style('hemingway_style', get_stylesheet_uri() );
+
+    wp_enqueue_style( 'hemingway_style', get_template_directory_uri() . "/style.css" );
+
  }
  add_action( 'wp_enqueue_scripts', 'cwp_theme_scripts_styles' );
+
+
  
  /**
   * Add humans.txt to the <head> element.
