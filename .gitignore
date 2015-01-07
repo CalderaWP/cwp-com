@@ -1,5 +1,5 @@
-public_html/site-content/plugins
-public_html/site-content/themes
+public_html/cwp-content/plugins
+public_html/cwp-content/themes
 public_html/wp
 vendor
 production-config.php

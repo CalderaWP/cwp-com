@@ -1,11 +1,15 @@
 {
-  "name"        : "shelob9/site",
-  "description" : "site.",
+  "name"        : "CalderaWP/cwp",
+  "description" : "calderawp.com",
   "authors"     : [
     {
       "name"    : "Josh Pollock",
       "email"   : "Josh@joshpress.net",
       "homepage": "http://joshpress.net/"
+    },
+    {
+      "name"    : "David Cramer",
+      "homepage": "http://cramer.co.za"
     }
   ],
   "type"        : "project",
@@ -26,6 +30,10 @@
     {
       "type": "git",
       "url": "https://github.com/pods-framework/pods"
+    },
+    {
+      "type" : "git",
+      "url"  : "https://bitbucket.org/calderadev/caldera-easy-pods"
     }
   ],
   "require"     : {
@@ -35,12 +43,11 @@
     "wpackagist-plugin/json-rest-api"                           : "*",
     "pods-framework/pods-deploy"                                : "*",
     "pods-framework/pods-json-api"                              : "*",
-    "wpackagist-plugin/restricted-site-access"                  : "*",
     "wpackagist-plugin/log-viewer"                              : "*",
     "wpackagist-plugin/caldera-forms"                           : "*",
     "wpackagist-theme/twentyfifteen"                            : "*",
-    "wpackagist-theme/fukasawa"                                 : "*"
-
+    "wpackagist-theme/hemingway"                                : "*",
+    "calderawp/caldera-easy-pods"                               : "*"
   },
   "require-dev" : {
     "wpackagist-plugin/log-deprecated-notices"              : "*",
@@ -52,8 +59,8 @@
   "extra"       : {
     "wordpress-install-dir": "public_html/wp",
     "installer-paths": {
-      "public_html/site-content/plugins/{$name}/" : ["type:wordpress-plugin"],
-      "public_html/site-content/themes/{$name}/"  : ["type:wordpress-theme"]
+      "public_html/cwp-content/plugins/{$name}/" : ["type:wordpress-plugin"],
+      "public_html/cwp-content/themes/{$name}/"  : ["type:wordpress-theme"]
     }
   }
 }

@@ -3,7 +3,7 @@
  * WordPress configuration for development in VVV
  */
 //db
-define( 'DB_NAME', 'site');
+define( 'DB_NAME', 'cwp');
 define( 'DB_USER', 'wp' );
 define( 'DB_PASSWORD', 'wp' );
 define( 'DB_HOST',  'localhost');

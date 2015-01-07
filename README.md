@@ -5,13 +5,14 @@ Josh's WordPress VVV Site Starter
 
 
 ### Setup Local Dev
+
+Make sure your bitbucket account has your 
 cd into your VVV's www dir
 
-git clone https://github.com/shelob9/wp-vvv-start.git site
+git clone https://github.com/shelob9/wp-vvv-start.git cwp-com
 
-Find and Replace "site" and change to whatever you want.
 
-cd site
+cd <whatever>/cwp-com
 
 composer update
 
