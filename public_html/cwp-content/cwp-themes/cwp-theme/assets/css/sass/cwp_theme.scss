@@ -7,13 +7,19 @@
  */
 $cwp_green: #A3BE5F;
 
-
-//front page
-.front-page-feature {
+@mixin general( $margin ) {
   background-color: #ffffff;
   border: 1px solid $cwp_green;
+  padding: $margin;
+}
 
-  padding: 15%
+//content general stylings
+.content {
+  @include general( 5% );
+}
+//front page
+.front-page-feature {
+  @include general( 15% );
   margin-bottom: 24px;
   background-position-y: 0;
   background-repeat: no-repeat;
