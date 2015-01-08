@@ -12,55 +12,70 @@
  * @since 0.1.0
  */
  
- // Useful global constants
+// Useful global constants
 define( 'CWP_THEME_VERSION', '0.1.0' );
- 
- /**
-  * Set up theme defaults and register supported WordPress features.
-  *
-  * @uses load_theme_textdomain() For translation/localization support.
-  *
-  * @since 0.1.0
-  */
- function cwp_theme_setup() {
-	/**
-	 * Makes CWP Theme available for translation.
-	 *
-	 * Translations can be added to the /lang directory.
-	 * If you're building a theme based on CWP Theme, use a find and replace
-	 * to change 'cwp_theme' to the name of your theme in all template files.
-	 */
-	load_theme_textdomain( 'cwp_theme', get_template_directory() . '/languages' );
- }
- add_action( 'after_setup_theme', 'cwp_theme_setup' );
- 
- /**
-  * Enqueue scripts and styles for front-end.
-  *
-  * @since 0.1.0
-  */
- function cwp_theme_scripts_styles() {
-	$postfix = ( defined( 'SCRIPT_DEBUG' ) && true === SCRIPT_DEBUG ) ? '' : '.min';
 
-	wp_enqueue_script( 'cwp_theme', get_template_directory_uri() . "/assets/js/cwp_theme{$postfix}.js", array(), CWP_THEME_VERSION, true );
-		
-	wp_enqueue_style( 'cwp_theme', get_template_directory_uri() . "/assets/css/cwp_theme{$postfix}.css", array(), CWP_THEME_VERSION );
+/**
+ * Set up theme defaults and register supported WordPress features.
+ *
+ * @uses load_theme_textdomain() For translation/localization support.
+ *
+ * @since 0.1.0
+ */
+function cwp_theme_setup() {
+   /**
+    * Makes CWP Theme available for translation.
+    *
+    * Translations can be added to the /lang directory.
+    * If you're building a theme based on CWP Theme, use a find and replace
+    * to change 'cwp_theme' to the name of your theme in all template files.
+    */
+   load_theme_textdomain( 'cwp_theme', get_template_directory() . '/languages' );
+}
+add_action( 'after_setup_theme', 'cwp_theme_setup' );
 
-    wp_deregister_style('hemingway_style', get_stylesheet_uri() );
+/**
+ * Enqueue scripts and styles for front-end.
+ *
+ * @since 0.1.0
+ */
+function cwp_theme_scripts_styles() {
+   $postfix = ( defined( 'SCRIPT_DEBUG' ) && true === SCRIPT_DEBUG ) ? '' : '.min';
 
-    wp_enqueue_style( 'hemingway_style', get_template_directory_uri() . "/style.css" );
+   wp_enqueue_script( 'cwp_theme', get_template_directory_uri() . "/assets/js/cwp_theme{$postfix}.js", array(), CWP_THEME_VERSION, true );
 
- }
- add_action( 'wp_enqueue_scripts', 'cwp_theme_scripts_styles' );
+   wp_enqueue_style( 'cwp_theme', get_template_directory_uri() . "/assets/css/cwp_theme{$postfix}.css", array(), CWP_THEME_VERSION );
+
+   wp_deregister_style('hemingway_style', get_stylesheet_uri() );
+
+   wp_enqueue_style( 'hemingway_style', get_template_directory_uri() . "/style.css" );
+
+}
+add_action( 'wp_enqueue_scripts', 'cwp_theme_scripts_styles' );
 
 
- 
- /**
-  * Add humans.txt to the <head> element.
-  */
- function cwp_theme_header_meta() {
-	$humans = '<link type="text/plain" rel="author" href="' . get_template_directory_uri() . '/humans.txt" />';
-	
-	echo apply_filters( 'cwp_theme_humans', $humans );
- }
- add_action( 'wp_head', 'cwp_theme_header_meta' );
+
+/**
+ * Add humans.txt to the <head> element.
+ */
+function cwp_theme_header_meta() {
+   $humans = '<link type="text/plain" rel="author" href="' . get_template_directory_uri() . '/humans.txt" />';
+
+   echo apply_filters( 'cwp_theme_humans', $humans );
+}
+add_action( 'wp_head', 'cwp_theme_header_meta' );
+
+/**
+ * Returns the post format of a post, or if its a CPT, will return post type
+ *
+ * @return false|mixed|string
+ */
+function cwp_theme_format_or_type() {
+   $post_type = get_post_type();
+   if ( 'post' != $post_type ) {
+      return get_post_format();
+   }else{
+      return $post_type;
+   }
+
+}
