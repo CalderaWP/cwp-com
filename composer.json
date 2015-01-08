@@ -48,7 +48,8 @@
     "wpackagist-plugin/caldera-forms"                           : "*",
     "wpackagist-theme/twentyfifteen"                            : "*",
     "wpackagist-theme/hemingway"                                : "*",
-    "calderawp/caldera-easy-pods"                               : "*"
+    "calderawp/caldera-easy-pods"                               : "*",
+    "wpackagist-plugin/edd-prevent-eu-checkout"                        : "*"
   },
   "require-dev" : {
     "wpackagist-plugin/log-deprecated-notices"              : "*",
