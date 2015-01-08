@@ -4,3 +4,4 @@ public_html/wp
 vendor
 production-config.php
 debug.log
+public_html/cwp-content/uploads
