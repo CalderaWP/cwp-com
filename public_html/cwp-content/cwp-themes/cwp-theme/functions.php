@@ -48,7 +48,10 @@ function cwp_theme_scripts_styles() {
 
    wp_enqueue_script( 'cwp_theme', get_stylesheet_directory_uri() . "/assets/js/cwp_theme{$postfix}.js", array(), CWP_THEME_VERSION, true );
 
+   wp_localize_script( 'cwp_theme', 'cwp_theme', array( 'adminajax' => admin_url( 'admin-ajax.php') ) );
+
    wp_enqueue_style( 'cwp_theme', get_stylesheet_directory_uri() . "/assets/css/cwp_theme{$postfix}.css", array(), CWP_THEME_VERSION );
+
 
 
 
@@ -108,3 +111,8 @@ function cwp_theme_background_style_tag( $id, $extra_styles = false ) {
    return $style;
 
 }
+
+
+add_action( 'init', function() {
+   include( dirname( __FILE__ ) .'/includes/baldrick.php' );
+});

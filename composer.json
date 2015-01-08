@@ -34,6 +34,14 @@
     {
       "type" : "git",
       "url"  : "https://bitbucket.org/calderadev/caldera-easy-pods"
+    },
+    {
+      "type" : "git",
+      "url"  : "https://github.com/pods-framework/pods-frontier"
+    },
+    {
+      "type" : "git",
+      "url"  : "https://github.com/Desertsnowman/Caldera-Forms"
     }
   ],
   "require"     : {
@@ -49,7 +57,9 @@
     "wpackagist-theme/twentyfifteen"                            : "*",
     "wpackagist-theme/hemingway"                                : "*",
     "calderawp/caldera-easy-pods"                               : "*",
-    "wpackagist-plugin/edd-prevent-eu-checkout"                        : "*"
+    "wpackagist-plugin/edd-prevent-eu-checkout"                 : "*",
+    "pods-framework/pods-frontier"                              : "*",
+    "wpackagist-plugin/pods-frontier-auto-template"             : "*"
   },
   "require-dev" : {
     "wpackagist-plugin/log-deprecated-notices"              : "*",
