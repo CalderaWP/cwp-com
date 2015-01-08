@@ -42,11 +42,11 @@ add_action( 'after_setup_theme', 'cwp_theme_setup' );
 function cwp_theme_scripts_styles() {
    $postfix = ( defined( 'SCRIPT_DEBUG' ) && true === SCRIPT_DEBUG ) ? '' : '.min';
 
-   wp_enqueue_script( 'cwp_theme', get_template_directory_uri() . "/assets/js/cwp_theme{$postfix}.js", array(), CWP_THEME_VERSION, true );
+   wp_enqueue_script( 'cwp_theme', get_stylesheet_directory_uri() . "/assets/js/cwp_theme{$postfix}.js", array(), CWP_THEME_VERSION, true );
 
-   wp_enqueue_style( 'cwp_theme', get_template_directory_uri() . "/assets/css/cwp_theme{$postfix}.css", array(), CWP_THEME_VERSION );
+   wp_enqueue_style( 'cwp_theme', get_stylesheet_directory_uri() . "/assets/css/cwp_theme{$postfix}.css", array(), CWP_THEME_VERSION );
 
-   wp_deregister_style('hemingway_style', get_stylesheet_uri() );
+   wp_deregister_style('hemingway_style' );
 
    wp_enqueue_style( 'hemingway_style', get_template_directory_uri() . "/style.css" );
 
