@@ -10,7 +10,7 @@ get_header(); ?>
 
 <div class="wrapper section-inner">						
 
-	<div class="content left">
+	<div class="content front-page-content left">
 		<div class="front-page-feature" <?php echo cwp_theme_background_style_tag( 8 ); ?>>
 			<div class="title-wrap">
 				<h5><a href="#" title="Caldera Forms">Caldera Forms</a> <span>Responsive Form Builder</span></h5>
