@@ -17,9 +17,17 @@ $cwp_green: #A3BE5F;
 .content {
   @include general( 5% );
 }
+
+
 //front page
+.content.front-page-content {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
 .front-page-feature {
-  @include general( 15% );
+  @include general( 5% );
   margin-bottom: 24px;
   background-position-y: 0;
   background-repeat: no-repeat;

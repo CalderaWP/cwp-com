@@ -10,10 +10,15 @@
   border: 1px solid #a3be5f;
   padding: 5%; }
 
+.content.front-page-content {
+  background: none;
+  border: none;
+  padding: 0; }
+
 .front-page-feature {
   background-color: #ffffff;
   border: 1px solid #a3be5f;
-  padding: 15%;
+  padding: 5%;
   margin-bottom: 24px;
   background-position-y: 0;
   background-repeat: no-repeat; }
