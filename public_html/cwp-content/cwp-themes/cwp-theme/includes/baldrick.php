@@ -29,9 +29,10 @@ add_action( 'wp_enqueue_scripts', function() {
 function cwp_theme_baldrick_modal_trigger( $action, $text, $atts = false ) {
 
 	$atts[ 'data-action' ] = $action;
+	$atts[ 'data-request' ] = admin_url( 'admin-ajax.php' );
 
 	foreach( $atts as $att => $value ) {
-		$att_out[] = esc_attr( $att ).'='.esc_attr( $value );
+		$att_out[] = esc_attr( $att ).'="'.esc_attr( $value ).'"';
 	}
 
 	$att_out = implode( ' ', $att_out );
@@ -42,9 +43,12 @@ function cwp_theme_baldrick_modal_trigger( $action, $text, $atts = false ) {
 /**
  * Open Single Caldera Answer in a modal via Baldrick
  */
-add_action( 'wp_ajax_cwp_theme_load_single_caldera_answer', function() {
+add_action( 'wp_ajax_cwp_theme_load_single_caldera_answer', 'cwp_theme_load_single_caldera_answer_cb' );
+add_action( 'wp_ajax_nopriv_cwp_theme_load_single_caldera_answer', 'cwp_theme_load_single_caldera_answer_cb' );
+function cwp_theme_load_single_caldera_answer_cb() {
+
 	if ( function_exists( 'pods' ) ) {
-		$id = pods_v_sanitized( 'data-answer-id', 'post' );
+		$id = pods_v_sanitized( 'answerId', 'post' );
 		if ( $id ) {
 			$out = cwp_theme_get_single_answer_view( $id );
 			if ( $out ) {
@@ -56,7 +60,9 @@ add_action( 'wp_ajax_cwp_theme_load_single_caldera_answer', function() {
 
 	}
 
-});
+	die( __( 'Sorry, something went wrong. Much sadness, very fail.', 'cwp-theme' ) );
+
+}
 
 /**
  * Get the rendered template for a single Caldera Answer
@@ -69,8 +75,8 @@ function cwp_theme_get_single_answer_view( $id, $template = 'single answer' ) {
 	if ( function_exists( 'pods' ) ) {
 		$key = __FUNCTION__.'_'.$id;
 		if ( false == ( $out = pods_transient_get( $id ) ) ) {
-			$pods = pods( 'caldera_answer', $id );
-			if ( $pods->id() == $id ) {
+			$pods = pods( 'caldera_answers', $id, true );
+			if ( is_object( $pods ) && $pods->id() == $id ) {
 				$out = $pods->template( $template );
 			}
 
