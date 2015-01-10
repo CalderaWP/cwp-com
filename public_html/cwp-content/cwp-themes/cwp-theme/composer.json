@@ -1,0 +1,14 @@
+{
+    "name": "calderawp/cwp-theme",
+    "license": "GPLv2+",
+    "authors": [
+        {
+            "name": "Josh Pollock",
+            "email": "Josh@JoshPress.net"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "calderawp/baldrick-wp-front-end": "dev-master"
+    }
+}

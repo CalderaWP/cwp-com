@@ -9,36 +9,6 @@
  * @copyright 2014 Josh Pollock
  */
 
-/**
- * Enqueue Baldrick
- */
-add_action( 'wp_enqueue_scripts', function() {
-	wp_enqueue_script( 'wp-balrick', get_stylesheet_directory_uri() ."/assets/js/src/wp-baldrick-full.js");
-	wp_enqueue_style( 'wp-balrick', get_stylesheet_directory_uri() ."/assets/css/baldrick/modal.css");
-});
-
-/**
- * Create a modal using Baldrick and output HTML for it.
- *
- * @param string $action Name of action to run
- * @param string $text Text for link that opens said
- * @param bool|array $atts Optional. Additional data-* to use in element.
- *
- * @return string
- */
-function cwp_theme_baldrick_modal_trigger( $action, $text, $atts = false ) {
-
-	$atts[ 'data-action' ] = $action;
-	$atts[ 'data-request' ] = admin_url( 'admin-ajax.php' );
-
-	foreach( $atts as $att => $value ) {
-		$att_out[] = esc_attr( $att ).'="'.esc_attr( $value ).'"';
-	}
-
-	$att_out = implode( ' ', $att_out );
-
-	return '<a class="wp-baldrick" data-modal="true" '.$att_out.' >'.$text.'</a>';
-}
 
 /**
  * Open Single Caldera Answer in a modal via Baldrick
@@ -90,6 +60,7 @@ function cwp_theme_get_single_answer_view( $id, $template = 'single answer' ) {
 			return $out;
 
 		}
+
 	}
 
 

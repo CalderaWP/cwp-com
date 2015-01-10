@@ -5,3 +5,4 @@ vendor
 production-config.php
 debug.log
 public_html/cwp-content/uploads
+node_modules

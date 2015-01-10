@@ -35,7 +35,7 @@
 									'data-modal-width' => 300,
 									'data-answer-id'   => get_the_id()
 								);
-								echo( cwp_theme_baldrick_modal_trigger( $action, get_the_title(), $atts) );
+								echo( calderawp\baldrick_wp_front_end\modal::make( $action, $atts,get_the_title() ) );
 								?>
 							</h2>
 

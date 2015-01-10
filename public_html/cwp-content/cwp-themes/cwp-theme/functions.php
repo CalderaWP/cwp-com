@@ -115,4 +115,7 @@ function cwp_theme_background_style_tag( $id, $extra_styles = false ) {
 
 add_action( 'init', function() {
    include( dirname( __FILE__ ) .'/includes/baldrick.php' );
+
+   include_once( dirname(__FILE__ ) . '/vendor/autoload.php' );
 });
+

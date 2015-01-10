@@ -8,5 +8,15 @@ For more information on how to use this to create new cwps, see [my article on u
 * Clone or copy this repo in that directory.
 * In each file from this repo change "cwp" to whatever you called the parent directory.
 * vagrant provision
+* cd cwp
+* composer update
+* cd public_html/cwp-content/cwp-theme
+* composer update
+* npm install
+* grunt
+* cd vendor/calderawp/baldrick-wp-front-end
+* npm install
+* grunt
+* figure out how to automate all or most of that.
 
 You may or may not need to vagrant halt and vagrant up to get it to work.

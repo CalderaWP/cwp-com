@@ -9,10 +9,5 @@
  ( function( window, undefined ) {
 	'use strict';
 
-    // initialise baldrick triggers
-    jQuery('.wp-baldrick').baldrick({
-     request     : cwp_theme.adminjax,
-     method      : 'POST'
-    });
 
  } )( this );

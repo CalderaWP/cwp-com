@@ -4,6 +4,9 @@ module.exports = function( grunt ) {
 	// Load all grunt tasks
 	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
+
+	grunt.loadNpmTasks('grunt-git');
+
 	// Project configuration
 	grunt.initConfig( {
 		pkg:    grunt.file.readJSON( 'package.json' ),
@@ -104,6 +107,15 @@ module.exports = function( grunt ) {
 				tasks: ['jshint', 'concat', 'uglify'],
 				options: {
 					debounceDelay: 500
+				}
+			}
+		},
+		gitclone: {
+			clone: {
+				options: {
+					repository: 'https://github.com/Desertsnowman/BaldrickJS',
+					branch: 'master',
+					directory: 'baldrickjS'
 				}
 			}
 		}
