@@ -10,6 +10,9 @@
   border: 1px solid #a3be5f;
   padding: 5%; }
 
+.featured-media a, .featured-media img {
+  width: 100%; }
+
 .content.front-page-content {
   background: none;
   border: none;

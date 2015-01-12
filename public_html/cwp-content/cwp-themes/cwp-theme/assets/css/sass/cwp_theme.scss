@@ -18,6 +18,11 @@ $cwp_green: #A3BE5F;
   @include general( 5% );
 }
 
+.featured-media {
+  a, img {
+    width: 100%
+  }
+}
 
 //front page
 .content.front-page-content {
