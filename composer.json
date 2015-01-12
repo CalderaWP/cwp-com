@@ -47,7 +47,6 @@
   "require"     : {
     "johnpbloch/wordpress"                                      : "4.1",
     "pods-framework/pods"                                       : "2.x",
-    "wpackagist-plugin/caldera-forms"                           : "*",
     "wpackagist-plugin/json-rest-api"                           : "*",
     "pods-framework/pods-deploy"                                : "*",
     "pods-framework/pods-json-api"                              : "*",
