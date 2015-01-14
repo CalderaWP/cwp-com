@@ -139,12 +139,18 @@ add_action( 'init', function() {
  * Include other files
  */
 add_action( 'init', function() {
-   include( dirname( __FILE__ ) . '/includes/baldrick.php' );
-   include_once( dirname( __FILE__ ) . '/includes/CWP_Theme_EDD_Product_IDs.php' );
-   include_once( dirname( __FILE__ ) .'/includes/CWP_Theme_EDD.php' );
+   include( dirname( __FILE__ ) . '/includes/CWP_Theme_Caldera_Answers.php' );
 
-   include_once( dirname( __FILE__ ) . '/includes/CWP_Front_Page_Data.php' );
-   include_once( dirname( __FILE__ ) . '/includes/CWP_Front_Page.php' );
+   include( dirname( __FILE__ ) . '/includes/baldrick.php' );
+
+   include( dirname( __FILE__ ) . '/includes/CWP_Theme_EDD_Product_IDs.php' );
+   include( dirname( __FILE__ ) . '/includes/CWP_Theme_EDD.php' );
+
+   include( dirname( __FILE__ ) . '/includes/CWP_Front_Page_Data.php' );
+   include( dirname( __FILE__ ) . '/includes/CWP_Front_Page.php' );
+
+
 
 
 });
+
