@@ -41,7 +41,7 @@ $cwp_green: #A3BE5F;
     width: 100%;
     display: inline-block;
     padding: 12px;
-    h5{
+    h3{
       a {
         color: #FAEBD7;
         float: left;
@@ -56,10 +56,10 @@ $cwp_green: #A3BE5F;
 
     }
     @media (max-width: 600px) {
-      h5, h5 span {
+      h3, h3 span {
         display: block;
       }
-      h5 span {
+      h3 span {
         text-align: right;
         margin-top: 10px;
       }

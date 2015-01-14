@@ -112,10 +112,39 @@ function cwp_theme_background_style_tag( $id, $extra_styles = false ) {
 
 }
 
+/**
+ * HTML markup for link to the WPORG page for CF
+ *
+ * @param bool|string $text Optionak
+ *
+ * @return string
+ */
+function cwp_theme_cf_wporg_link( $text = false) {
+   if ( ! $text ) {
+      $text = 'Caldera Forms';
+   }
 
+   return sprintf( '<a title="Caldera Forms WordPress.org Download Page" href="https://wordpress.org/plugins/caldera-forms/" target="_blank" >%1s</a>', $text );
+
+}
+
+/**
+ * Include Dependencies.
+ */
 add_action( 'init', function() {
-   include( dirname( __FILE__ ) .'/includes/baldrick.php' );
-
    include_once( dirname(__FILE__ ) . '/vendor/autoload.php' );
 });
 
+/**
+ * Include other files
+ */
+add_action( 'init', function() {
+   include( dirname( __FILE__ ) . '/includes/baldrick.php' );
+   include_once( dirname( __FILE__ ) . '/includes/CWP_Theme_EDD_Product_IDs.php' );
+   include_once( dirname( __FILE__ ) .'/includes/CWP_Theme_EDD.php' );
+
+   include_once( dirname( __FILE__ ) . '/includes/CWP_Front_Page_Data.php' );
+   include_once( dirname( __FILE__ ) . '/includes/CWP_Front_Page.php' );
+
+
+});
