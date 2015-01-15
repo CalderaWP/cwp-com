@@ -154,3 +154,28 @@ add_action( 'init', function() {
 
 });
 
+/**
+ * Disable comments on all post types besides post
+ */
+add_action( 'init', function() {
+   $post_types = get_post_types( array( 'public' => true ) );
+   foreach( $post_types as $post_type ) {
+      if ($post_type == 'post' ) {
+         continue;
+      }
+
+      if ( post_type_supports( $post_type, 'comments' ) ) {
+         remove_post_type_support( $post_type, 'comments' );
+      }
+
+   }
+
+   add_filter( 'comments_open', function( $open, $post )  {
+      if ( 'post' != get_post_type( $post ) ) {
+         $open = false;
+      }
+
+      return $open;
+   },50, 2 );
+
+});
