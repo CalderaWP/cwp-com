@@ -58,7 +58,8 @@
     "calderawp/caldera-easy-pods"                               : "*",
     "wpackagist-plugin/edd-prevent-eu-checkout"                 : "*",
     "pods-framework/pods-frontier"                              : "*",
-    "wpackagist-plugin/pods-frontier-auto-template"             : "*"
+    "wpackagist-plugin/pods-frontier-auto-template"             : "*",
+    "wpackagist-plugin/edd-coming-soon"                         : "*"
   },
   "require-dev" : {
     "wpackagist-plugin/log-deprecated-notices"              : "*",

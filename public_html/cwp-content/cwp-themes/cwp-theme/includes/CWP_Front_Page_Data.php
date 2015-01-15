@@ -40,7 +40,7 @@ class CWP_Front_Page_Data {
 				'background' => 9,
 				'background_style' => '',
 				'content' => array(
-					
+
 				),
 				'easy_pod' => 'featured_products',
 				'easy_pod_wrap_class' => 'block-grid-3'

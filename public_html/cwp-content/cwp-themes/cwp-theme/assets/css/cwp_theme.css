@@ -27,6 +27,14 @@
   .product-preview .product-tagline {
     padding: 4px; }
 
+.related-products h5 {
+  margin-bottom: .7em; }
+.related-products span {
+  text-transform: none;
+  margin-right: 4px; }
+.related-products span:last-child {
+  margin-right: 0; }
+
 .content {
   background-color: #ffffff;
   border: 1px solid #a3be5f;

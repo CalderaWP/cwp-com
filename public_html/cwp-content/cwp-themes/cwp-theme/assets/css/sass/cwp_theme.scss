@@ -9,6 +9,7 @@ $cwp_green: #A3BE5F;
 
 @import "block_grid";
 @import "product-preview";
+@import "related-products";
 
 @mixin general( $margin ) {
   background-color: #ffffff;

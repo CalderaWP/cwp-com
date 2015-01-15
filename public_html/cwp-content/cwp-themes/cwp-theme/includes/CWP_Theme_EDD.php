@@ -1,8 +1,8 @@
 <?php
 /**
- * @TODO What this does.
+ * EDD reflated stuff.
  *
- * @package   @TODO
+ * @package   @cwp_com
  * @author    Josh Pollock <Josh@JoshPress.net>
  * @license   GPL-2.0+
  * @link      
@@ -68,8 +68,8 @@ class CWP_Theme_EDD extends CWP_Theme_EDD_Product_IDs {
 		if ( is_string( $link ) ) {
 			if ( $as_html ) {
 				$post = get_post( $id );
-				$product_tagline = get_post_meta( $id, 'product_tagline',true );
-				if ( is_string( $product_tagline ) ) {
+				$product_tagline = self::product_tagline( $id );
+				if ( $product_tagline && is_string( $product_tagline ) && $post->post_title != $product_tagline ) {
 					$title_text = $product_tagline;
 				}else{
 					$title_text = sprintf( 'View %1s', $post->post_title );
@@ -81,6 +81,8 @@ class CWP_Theme_EDD extends CWP_Theme_EDD_Product_IDs {
 			return $link;
 
 		}
+
+		return '';
 
 	}
 
@@ -105,6 +107,107 @@ class CWP_Theme_EDD extends CWP_Theme_EDD_Product_IDs {
 	 */
 	public static function easy_rewrites_link( $as_html = true ) {
 		return self::product_link( self::$easy_rewrites_post_id, $as_html );
+
+	}
+
+	/**
+	 * Get the categories for a download
+	 *
+	 * @param int $id Post ID for a download.
+	 * @param bool $slugs_only Optional. If true, return only slugs for matches. Default is false.
+	 *
+	 * @return array
+	 */
+	public static function get_download_categories( $id, $slugs_only = false ) {
+		$terms = wp_get_post_terms( $id, 'download_category' );
+		if ( $slugs_only ) {
+			$terms = wp_list_pluck( $terms, 'slug' );
+		}
+
+		return $terms;
+
+	}
+
+	/**
+	 * Render a related product box
+	 *
+	 * @param int $id Post ID for a download.
+	 *
+	 * @return string
+	 */
+	public static function related_products_box( $id ) {
+		$query = self::related_products_query( $id );
+		$out = false;
+		if ( $query->have_posts() ) {
+			while ( $query->have_posts() ) {
+				$query->the_post();
+				$out[] = self::product_link( $query->post->ID );
+			}
+
+			wp_reset_postdata();
+		}
+
+		if ( is_array( $out ) ) {
+			$out = '<span>'.implode( '</span><span>', $out ).'</span>';
+			return sprintf( '<div class="related-products"><h5>Related Products</h5><div>%1s</div></div>', $out );
+
+		}
+
+		return  '';
+
+	}
+
+	/**
+	 * Get or make a product's tagline.
+	 *
+	 * @param int $id Post ID for a download.
+	 *
+	 * @return string
+	 */
+	public static function product_tagline( $post ) {
+		if ( ! is_object( $post ) ) {
+			$post = get_post( $post );
+		}
+
+		$product_tagline = get_post_meta( $post->ID, 'product_tagline', true );
+
+		if ( ! is_string( $product_tagline ) ) {
+			$product_tagline = $post->post_title;
+		}
+
+		return $product_tagline;
+	}
+
+
+	/**
+	 * Get up to 3 related downloads
+	 *
+	 * @param int $id Post ID for a download.
+	 *
+	 * @return WP_Query
+	 */
+	protected static function related_products_query( $id ) {
+		$terms = self::get_download_categories( $id, true );
+		$args  = array(
+			'post_type' => 'download',
+			'posts_per_page' => 3,
+			'orderby' => 'rand'
+
+		);
+
+		if ( is_array( $terms ) && ! empty( $terms ) ) {
+			$args['tax_query'] = array(
+				array(
+					'taxonomy' => 'download_category',
+					'field'    => 'slug',
+					'terms'    => $terms,
+				),
+			);
+		}
+
+		$query = new WP_Query( $args );
+
+		return $query;
 
 	}
 
