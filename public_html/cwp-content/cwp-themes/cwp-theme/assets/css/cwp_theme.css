@@ -5,6 +5,28 @@
  * Copyright (c) 2015 Josh Pollock
  * Licensed under the GPLv2+ license.
  */
+.block-grid-3 {
+  display: block;
+  padding: 0;
+  clear: both; }
+  .block-grid-3 .block-grid-item {
+    float: left;
+    width: 31%;
+    display: inline;
+    margin: 0 1%; }
+
+.product-preview {
+  border: 1px solid #c2c4c5;
+  height: 380px;
+  overflow: hidden; }
+  .product-preview img {
+    width: 100%; }
+  .product-preview h5 {
+    text-align: center;
+    margin-bottom: 1em; }
+  .product-preview .product-tagline {
+    padding: 4px; }
+
 .content {
   background-color: #ffffff;
   border: 1px solid #a3be5f;

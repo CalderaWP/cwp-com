@@ -1,0 +1,12 @@
+
+.block-grid-3 {
+  display: block;
+  padding: 0;
+  clear:both;
+  .block-grid-item {
+    float: left;
+    width: 31%;
+    display: inline;
+    margin: 0 1%;
+  }
+}

@@ -40,10 +40,10 @@ class CWP_Front_Page_Data {
 				'background' => 9,
 				'background_style' => '',
 				'content' => array(
-					'p' => array(
-						'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lobortis lacinia ultrices. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lobortis lacinia ultrices. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.'
-					)
-				)
+					
+				),
+				'easy_pod' => 'featured_products',
+				'easy_pod_wrap_class' => 'block-grid-3'
 			),
 			array(
 				'title' => 'Caldera Answers',
@@ -57,7 +57,7 @@ class CWP_Front_Page_Data {
 						'Caldera Answers is a set of resources, and training tools for learning WordPress development the right way, by CalderaWP\'s Josh Pollock. Josh is contributor to the top WordPress news and tutorial sites, including <a href="http://jpwp.me/tutsplus">Tuts+</a>, <a href="http://torquemag.io/author/joshp/">Torque</a>, <a href="http://jpwp.me/wpmu">WPMUDEV</a>, <a href="http://jpwp.me/wpbeginner">WPBegginer</a>.',
 						sprintf( 'Through Caldera Answers he offers his highly-opinionated collection of %1s as well as training courses. The %2s teach WordPress development using a project-oriented approach designed to give beginner and intermediate WordPress developers practical training using establish standards, the best tools and best practices.', CWP_Theme_Caldera_Answers::caldera_answers_link( '"How To Do X With WordPress" links' ), CWP_Theme_Caldera_Answers::caldera_answers_course_link( 'Caldera Answers Courses' ) ),
 					)
-				)
+				),
 			)
 		);
 	}

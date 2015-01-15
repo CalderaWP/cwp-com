@@ -4,6 +4,8 @@
 /** globals jQuery, cwp_theme**/
  ( function( window, undefined ) {
 	'use strict';
+    jQuery(document).ready(function($) {
 
+    });
 
  } )( this );

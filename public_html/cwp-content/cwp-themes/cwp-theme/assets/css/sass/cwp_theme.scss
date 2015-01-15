@@ -7,6 +7,9 @@
  */
 $cwp_green: #A3BE5F;
 
+@import "block_grid";
+@import "product-preview";
+
 @mixin general( $margin ) {
   background-color: #ffffff;
   border: 1px solid $cwp_green;

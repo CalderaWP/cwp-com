@@ -48,6 +48,15 @@ class CWP_Front_Page extends CWP_Front_Page_Data {
 
 		}
 
+		if ( isset( $data [ 'easy_pod' ] ) ) {
+			$class = '';
+			if ( isset( $data [ 'easy_pod_wrap_class' ] ) ) {
+				$class = $data[ 'easy_pod_wrap_class' ];
+			}
+
+			$out[] = sprintf( '<div class="%1s">%2s</div><div class="clear"></div>', $class, cep_render_easy_pod( $data [ 'easy_pod' ] ) );
+		}
+
 		$style_tag = cwp_theme_background_style_tag( $data[ 'background' ], $data[ 'background_style' ] );
 
 		return sprintf( '<div class="front-page-feature" %1s >%2s</div>', $style_tag, implode( '', $out ) );
