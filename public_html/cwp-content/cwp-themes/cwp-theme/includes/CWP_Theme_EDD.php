@@ -186,16 +186,20 @@ class CWP_Theme_EDD extends CWP_Theme_EDD_Product_IDs {
 	 *
 	 * @return WP_Query
 	 */
-	protected static function related_products_query( $id ) {
-		$terms = self::get_download_categories( $id, true );
+	protected static function related_products_query( $id, $terms = true ) {
+		if ( $terms && ! is_array( $terms ) ) {
+			$terms = self::get_download_categories( $id, true );
+		}
+
 		$args  = array(
 			'post_type' => 'download',
 			'posts_per_page' => 3,
-			'orderby' => 'rand'
+			'orderby' => 'rand',
+			'post__not_in' => array( $id )
 
 		);
 
-		if ( is_array( $terms ) && ! empty( $terms ) ) {
+		if ( $terms && is_array( $terms ) && ! empty( $terms ) ) {
 			$args['tax_query'] = array(
 				array(
 					'taxonomy' => 'download_category',
@@ -206,6 +210,10 @@ class CWP_Theme_EDD extends CWP_Theme_EDD_Product_IDs {
 		}
 
 		$query = new WP_Query( $args );
+
+		if ( 0 == $query->post_count ) {
+			$query = self::related_products_query( $id, false );
+		}
 
 		return $query;
 
