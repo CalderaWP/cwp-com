@@ -59,7 +59,8 @@
     "wpackagist-plugin/edd-prevent-eu-checkout"                 : "*",
     "pods-framework/pods-frontier"                              : "*",
     "wpackagist-plugin/pods-frontier-auto-template"             : "*",
-    "wpackagist-plugin/edd-coming-soon"                         : "*"
+    "wpackagist-plugin/edd-coming-soon"                         : "*",
+    "wpackagist-plugin/sidebar-login"                           : "*"
   },
   "require-dev" : {
     "wpackagist-plugin/log-deprecated-notices"              : "*",
