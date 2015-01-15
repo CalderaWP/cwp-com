@@ -1,12 +1,9 @@
-Josh's WordPress VVV Site Starter
+CalderaWP.com
 ================================
 
-[Why I Love Composer For This Sort Of Thing](http://joshpress.net/blog/using-composer-increase-wordpress-development-powers/)
 
 
 ### Setup Local Dev
-
-Make sure your bitbucket account has your 
 cd into your VVV's www dir
 
 git clone https://github.com/shelob9/wp-vvv-start.git cwp-com
