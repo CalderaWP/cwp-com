@@ -138,12 +138,11 @@ add_action( 'init', function() {
 /**
  * Include other files
  */
-add_action( 'init', function() {
+add_action( 'plugins_loaded', function() {
    include( dirname( __FILE__ ) . '/includes/CWP_Theme_Caldera_Answers.php' );
 
    include( dirname( __FILE__ ) . '/includes/baldrick.php' );
 
-   include( dirname( __FILE__ ) . '/includes/CWP_Theme_EDD_Product_IDs.php' );
    include( dirname( __FILE__ ) . '/includes/CWP_Theme_EDD.php' );
 
    include( dirname( __FILE__ ) . '/includes/CWP_Front_Page_Data.php' );
@@ -179,3 +178,17 @@ add_action( 'init', function() {
    },50, 2 );
 
 });
+
+
+/**
+ * Register widget area to be used on EDD pages
+*/
+add_action( 'widgets_init', array( cwp_theme_get_edd_class(), 'edd_widget_area' ) );
+
+function cwp_theme_get_edd_class() {
+   include( dirname( __FILE__ ) . '/includes/CWP_Theme_EDD_Product_IDs.php' );
+   include( dirname( __FILE__ ) . '/includes/CWP_Theme_EDD.php' );
+
+   return \CWP_Theme_EDD::init();
+
+}

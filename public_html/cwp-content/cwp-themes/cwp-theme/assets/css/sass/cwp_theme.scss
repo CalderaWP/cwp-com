@@ -110,6 +110,20 @@ $cwp_green: #A3BE5F;
   }
 }
 
+@for $i from 1 through 12 {
+  .widget.widget_caldera_forms_widget.edd-widget {
+    .col-sm-#{$i} {
+      width: 100%;
+      display: block;
+    }
+  }
+  .live-gravatar {
+    display: none;
+  }
+
+}
+
+
 
 //menu
 .blog-menu a {
@@ -142,3 +156,5 @@ $cwp_green: #A3BE5F;
 .blog-menu li:hover > ul {
 
 }
+
+

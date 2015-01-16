@@ -219,4 +219,71 @@ class CWP_Theme_EDD extends CWP_Theme_EDD_Product_IDs {
 
 	}
 
+	/**
+	 * Create EDD widget area
+	 */
+	public static function edd_widget_area()  {
+		register_sidebar( array(
+			'name'          => _( 'EDD Widget Area' ),
+			'id'            => 'cwp-theme-edd-related',
+			'description'   => _( 'EDD Widget Area' ),
+			'before_title' => '<h3 class="widget-title edd-widget-title">',
+			'after_title' => '</h3>',
+			'before_widget' => '<div class="widget %2$s edd-widget"><div class="widget-content">',
+			'after_widget' => '</div><div class="clear"></div></div>'
+		) );
+
+	}
+
+	/**
+	 * Check if current post is EDD related
+	 *
+	 * @param bool|int|\WP_Post $post Optional. Post object or post ID. Default of false will attempt to use global $post
+	 *
+	 * @return bool
+	 */
+	public static function is_edd_related( $post = false ) {
+		if ( ! is_a( $post, 'WP_Post' ) ) {
+			if ( 0 < intval( $post ) ) {
+				$post = get_post( $post );
+			}else{
+				global $post;
+
+			}
+
+		}
+
+		if ( ! $post || ! is_a( $post, 'WP_Post' ) ) {
+			return false;
+
+		}
+
+		if ( 'download' == get_post_type( $post ) || in_array( $post->ID, array( 4,5,6,7,377 ) ) || is_tax( 'download_category' ) || is_tax( 'download_tag' )   ) {
+				return true;
+		}
+
+	}
+
+	/**
+	 * Class instance
+	 *
+	 * @var \CWP_Theme_EDD
+	 */
+	private static $instance;
+
+	/**
+	 * Get class instance
+	 *
+	 * @return \CWP_Theme_EDD
+	 */
+	public static function init() {
+		if ( ! self::$instance ) {
+			self::$instance = new self;
+		}
+
+		return self::$instance;
+
+	}
+
+
 }
