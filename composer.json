@@ -86,10 +86,10 @@
     "wpackagist-plugin/simply-show-ids"                     : "*"
   },
   "extra"       : {
-    "wordpress-install-dir": "public_html/wp",
+    "wordpress-install-dir": "public/wp",
     "installer-paths": {
-      "public_html/cwp-content/plugins/{$name}/" : ["type:wordpress-plugin"],
-      "public_html/cwp-content/themes/{$name}/"  : ["type:wordpress-theme"]
+      "public/cwp-content/plugins/{$name}/" : ["type:wordpress-plugin"],
+      "public/cwp-content/themes/{$name}/"  : ["type:wordpress-theme"]
     }
   }
 }
