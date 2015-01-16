@@ -46,6 +46,14 @@
     {
       "type" : "git",
       "url"  : "https://bitbucket.org/shelob9/wb-db-migrate-pro"
+    },
+    {
+      "type" : "git",
+      "url"  : "https://bitbucket.org/calderadev/edd-recurring"
+    },
+    {
+      "type" : "git",
+      "url"  : "https://bitbucket.org/calderadev/edd-software-licensing"
     }
   ],
   "require"     : {
@@ -65,7 +73,10 @@
     "wpackagist-plugin/pods-frontier-auto-template"             : "*",
     "wpackagist-plugin/edd-coming-soon"                         : "*",
     "wpackagist-plugin/sidebar-login"                           : "*",
-    "shelob9/wp-migrate-db-pro"                                 : "*"
+    "shelob9/wp-migrate-db-pro"                                 : "*",
+    "calderawp/edd-software-licenses"                          : "*",
+    "calderawp/edd-recurring"                                  : "*"
+
   },
   "require-dev" : {
     "wpackagist-plugin/log-deprecated-notices"              : "*",
