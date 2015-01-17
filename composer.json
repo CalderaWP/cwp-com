@@ -80,8 +80,8 @@
     "shelob9/wp-migrate-db-pro"                                 : "*",
     "calderawp/edd-software-licenses"                           : "*",
     "calderawp/edd-recurring"                                   : "*",
-    "Desertsnowman/caldera-forms"                               : "*"
-
+    "Desertsnowman/caldera-forms"                               : "*",
+    "wpackagist-plugin/restricted-site-access"                  : "*"
   },
   "require-dev" : {
     "wpackagist-plugin/log-deprecated-notices"              : "*",
