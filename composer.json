@@ -54,6 +54,10 @@
     {
       "type" : "git",
       "url"  : "https://bitbucket.org/calderadev/edd-software-licensing"
+    },
+    {
+      "type" : "git",
+      "url"  : "https://github.com/Desertsnowman/Caldera-Forms"
     }
   ],
   "require"     : {
@@ -74,8 +78,9 @@
     "wpackagist-plugin/edd-coming-soon"                         : "*",
     "wpackagist-plugin/sidebar-login"                           : "*",
     "shelob9/wp-migrate-db-pro"                                 : "*",
-    "calderawp/edd-software-licenses"                          : "*",
-    "calderawp/edd-recurring"                                  : "*"
+    "calderawp/edd-software-licenses"                           : "*",
+    "calderawp/edd-recurring"                                   : "*",
+    "Desertsnowman/caldera-forms"                               : "*"
 
   },
   "require-dev" : {
