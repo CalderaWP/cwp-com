@@ -1,10 +1,11 @@
 <?php
 define( 'WP_ROOT_DIR',  dirname( dirname( __FILE__ ) ) );
-define(  'WP_WEBROOT_DIR',  WP_ROOT_DIR . '/public' );
+define( 'WP_WEBROOT_DIR',  WP_ROOT_DIR . '/public' );
 
 //define locations for configs
 $local_config = WP_ROOT_DIR . '/dev-config.php';
 $prod_config = WP_ROOT_DIR . '/production-config.php';
+
 //correct if production-config is in root, not above root
 if ( ! file_exists( $prod_config ) ) {
 	$prod_config = WP_ROOT_DIR . '/production-config.php';

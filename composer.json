@@ -58,6 +58,10 @@
     {
       "type" : "git",
       "url"  : "https://github.com/Desertsnowman/Caldera-Forms"
+    },
+    {
+      "type" : "git",
+      "url"  : "https://bitbucket.org/shelob9/wp-migrate-db-pro-files-addon"
     }
   ],
   "require"     : {
@@ -81,7 +85,8 @@
     "calderawp/edd-software-licenses"                           : "*",
     "calderawp/edd-recurring"                                   : "*",
     "Desertsnowman/caldera-forms"                               : "*",
-    "wpackagist-plugin/restricted-site-access"                  : "*"
+    "wpackagist-plugin/restricted-site-access"                  : "*",
+    "shelob9/wp-migrate-db-pro-files-addon"                    : "*"
   },
   "require-dev" : {
     "wpackagist-plugin/log-deprecated-notices"              : "*",

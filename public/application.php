@@ -1,13 +1,25 @@
 <?php
-
+/**
+ * Content dir/url
+ */
 define( 'CONTENT_DIR', '/cwp-content' );
 define( 'WP_CONTENT_DIR', WP_WEBROOT_DIR . CONTENT_DIR );
+define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/public' . CONTENT_DIR );
 
+/**
+ * DB info common to both configs
+ */
+$table_prefix = 'wp_';
 define('DB_CHARSET', 'utf8');
 define('DB_COLLATE', '');
-$table_prefix = 'wp_';
-define( 'WP_DEBUG', true );
-define( 'WP_DEBUG_LOG', true );
+if ( ! defined( 'DB_HOST' ) ) {
+	define( 'DB_HOST', 'localhost' );
+}
+
+
+/**
+ * DEBUG
+ */
 if ( ! defined( 'WP_LOCAL_DEV' ) ) {
 	define( 'WP_LOCAL_DEV', false );
 }
@@ -16,28 +28,27 @@ define( 'WP_DEBUG_LOG', true );
 if ( ! WP_LOCAL_DEV ) {
 	define( 'WP_DEBUG_DISPLAY', false );
 }
-if ( ! defined( 'DB_HOST' ) ) {
-	define( 'DB_HOST', 'localhost' );
-}
+
+
+/**
+ * Other
+ */
+//don't mess with files on server.
+define( 'AUTOMATIC_UPDATER_DISABLED', true );
+define( 'DISABLE_WP_CRON', true );
+define( 'DISALLOW_FILE_EDIT', true );
+
+//memory
 define( 'WP_MEMORY_LIMIT', '512M' );
+
+//memcached
 if ( file_exists( dirname( __FILE__ ) . '/memcached.php' ) ) {
 	$memcached_servers = include( dirname( __FILE__ ) . '/memcached.php' );
 }
 
-if ( WP_LOCAL_DEV ) {
-	if ( ! defined( 'WP_CONTENT_URL') ) {
-		define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/public' . CONTENT_DIR );
-	}
-}else{
-	if ( ! defined( 'WP_CONTENT_URL' ) ) {
-		define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/' . CONTENT_DIR );
-	}
-
-}
-
-define( 'AUTOMATIC_UPDATER_DISABLED', false );
-define( 'DISABLE_WP_CRON', true );
-define( 'DISALLOW_FILE_EDIT', true );
+/**
+ * Abspath
+ */
 if ( ! defined( 'ABSPATH' ) ) {
 	define( 'ABSPATH', WP_WEBROOT_DIR . '/wp/' );
 }
