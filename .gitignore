@@ -3,6 +3,7 @@ public/cwp-content/themes
 public/wp
 vendor
 production-config.php
+_production-config.php
 debug.log
 public/cwp-content/uploads
 node_modules
