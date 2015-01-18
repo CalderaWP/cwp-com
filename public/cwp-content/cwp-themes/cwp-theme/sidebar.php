@@ -7,9 +7,9 @@
 
 			if ( CWP_Theme_EDD::is_edd_related( $post) ) {
 				dynamic_sidebar( 'cwp-theme-edd-related' );
+			}else{
+				dynamic_sidebar( 'sidebar' );
 			}
-
-			dynamic_sidebar( 'sidebar' );
 
 		?>
 		
