@@ -206,3 +206,6 @@
 
 .blog-menu ul > li:last-child a {
   border-bottom-width: 0; }
+
+.footer.section.large-padding.bg-dark {
+  padding-top: 0; }
