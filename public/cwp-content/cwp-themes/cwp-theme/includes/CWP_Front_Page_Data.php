@@ -21,7 +21,7 @@ class CWP_Front_Page_Data {
 			array(
 				'title' => 'Caldera Forms',
 				'tagline' => 'Responsive Form Builder',
-				'title_link' => get_permalink( 303 ),
+				'title_link' => get_permalink( 447 ),
 				'title_link_title' => 'Caldera Forms: Responsive Form Builder',
 				'background' => 8,
 				'background_style' => '',
