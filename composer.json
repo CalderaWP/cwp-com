@@ -86,7 +86,8 @@
     "calderawp/edd-recurring"                                   : "*",
     "Desertsnowman/caldera-forms"                               : "*",
     "wpackagist-plugin/restricted-site-access"                  : "*",
-    "shelob9/wp-migrate-db-pro-files-addon"                    : "*"
+    "shelob9/wp-migrate-db-pro-files-addon"                     : "*",
+    "wpackagist-plugin/code-snippets-cpt"                              : "*"
   },
   "require-dev" : {
     "wpackagist-plugin/log-deprecated-notices"              : "*",
