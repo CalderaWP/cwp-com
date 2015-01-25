@@ -209,3 +209,12 @@
 
 .footer.section.large-padding.bg-dark {
   padding-top: 0; }
+
+.cwp-code-snippet {
+  border: 1px solid black; }
+  .cwp-code-snippet .code-snippet-description {
+    background: #f5f5f5;
+    margin-bottom: 0px;
+    padding: 4px; }
+  .cwp-code-snippet pre {
+    margin-top: 0px; }

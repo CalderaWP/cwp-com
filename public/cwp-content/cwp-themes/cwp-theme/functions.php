@@ -194,11 +194,30 @@ function cwp_theme_get_edd_class() {
  * Randomize Caldera Answers Easy Pods results
  */
 add_filter( 'caldera_easy_pods_query_params', function( $params, $pod, $tags, $easy_pod_slug ) {
-   if ( 'answers_widget' || 'caldera_answers' == $easy_pod_slug ) {
+   if ( 'caldera_answers' == $easy_pod_slug ) {
       $params[ 'orderby' ] = 'rand()';
    }
 
    return $params;
 
 }, 10, 4);
+
+
+/**
+ * Put an excerpt and additional markup on code snippets.
+ */
+add_filter( 'dsgnwrks_snippet_display', function( $snippet_html, $atts, $snippet ) {
+   $excerpt = '';
+   if ( $snippet->post_excerpt ) {
+      $excerpt = sprintf( '<div class="code-snippet-description">%1s</div>', wpautop( $snippet->post_excerpt ) );
+   }
+
+   $html = sprintf( '<div class="cwp-code-snippet">%1s %2s </div>', $excerpt, $snippet_html );
+
+   return $html;
+
+
+}, 10, 3 );
+
+?>
 
