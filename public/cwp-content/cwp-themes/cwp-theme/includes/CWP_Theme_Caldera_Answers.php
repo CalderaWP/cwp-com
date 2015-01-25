@@ -77,7 +77,7 @@ class CWP_Theme_Caldera_Answers {
 	 *
 	 * @return string
 	 */
-	protected static function link( $id, $text = false )  {
+	protected static function link( $id, $text = false ) {
 		$post = get_post( $id );
 		$link = get_permalink( $id );
 
@@ -90,5 +90,6 @@ class CWP_Theme_Caldera_Answers {
 		return $link;
 
 
+	}
 
 }
