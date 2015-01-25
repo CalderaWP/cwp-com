@@ -148,7 +148,6 @@ add_action( 'init', function() {
    include( dirname( __FILE__ ) . '/includes/CWP_Front_Page.php' );
 
 
-
 });
 
 /**
@@ -190,3 +189,16 @@ function cwp_theme_get_edd_class() {
    return \CWP_Theme_EDD::init();
 
 }
+
+/**
+ * Randomize Caldera Answers Easy Pods results
+ */
+add_filter( 'caldera_easy_pods_query_params', function( $params, $pod, $tags, $easy_pod_slug ) {
+   if ( 'answers_widget' || 'caldera_answers' == $easy_pod_slug ) {
+      $params[ 'orderby' ] = 'rand()';
+   }
+
+   return $params;
+
+}, 10, 4);
+

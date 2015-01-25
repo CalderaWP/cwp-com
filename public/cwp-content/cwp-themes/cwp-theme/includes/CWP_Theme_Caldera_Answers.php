@@ -89,5 +89,6 @@ class CWP_Theme_Caldera_Answers {
 
 		return $link;
 
-	}
+
+
 }
