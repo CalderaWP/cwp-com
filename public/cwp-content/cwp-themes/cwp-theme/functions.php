@@ -143,10 +143,10 @@ add_action( 'init', function() {
 
    include( dirname( __FILE__ ) . '/includes/baldrick.php' );
 
-
    include( dirname( __FILE__ ) . '/includes/CWP_Front_Page_Data.php' );
    include( dirname( __FILE__ ) . '/includes/CWP_Front_Page.php' );
 
+   include( dirname( __FILE__ ) . '/includes/CWP_Docs.php' );
 
 });
 
@@ -218,6 +218,25 @@ add_filter( 'dsgnwrks_snippet_display', function( $snippet_html, $atts, $snippet
 
 
 }, 10, 3 );
+
+/**
+ * Hook into the_content
+ */
+add_action( 'init',
+   function() {
+      add_filter( 'the_content',
+         function( $content ) {
+            if ( is_page( CWP_Docs::$docs_page_id ) ) {
+               $content = CWP_Docs::content_filter( $content );
+            }
+
+            return $content;
+
+         },
+      35 );
+
+   },
+35 );
 
 ?>
 

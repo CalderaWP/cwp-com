@@ -60,10 +60,11 @@ class CWP_Theme_EDD extends CWP_Theme_EDD_Product_IDs {
 	 *
 	 * @param int $id Product ID
 	 * @param bool $as_html Optional. To return full html markup, the default, or just the URL.
+	 * @param bool|string $link_text Optional. Can be used to overide default link text. Default is false, which uses post_title.
 	 *
 	 * @return bool|string
 	 */
-	protected static function product_link( $id, $as_html = true ) {
+	protected static function product_link( $id, $as_html = true, $link_text = false ) {
 		$link = get_permalink( $id );
 		if ( is_string( $link ) ) {
 			if ( $as_html ) {
@@ -75,7 +76,11 @@ class CWP_Theme_EDD extends CWP_Theme_EDD_Product_IDs {
 					$title_text = sprintf( 'View %1s', $post->post_title );
 				}
 
-				$link = sprintf( '<a href="%1s" title="%2s">%3s</a>', esc_url( $link ), esc_attr( $title_text ), $post->post_title );
+				if ( ! is_string( $link_text ) ) {
+					$link_text = $post->post_title;
+				}
+
+				$link = sprintf( '<a href="%1s" title="%2s">%3s</a>', esc_url( $link ), esc_attr( $title_text ), $link_text );
 			}
 
 			return $link;
@@ -260,6 +265,37 @@ class CWP_Theme_EDD extends CWP_Theme_EDD_Product_IDs {
 
 		if ( 'download' == get_post_type( $post ) || in_array( $post->ID, array( 4,5,6,7,377 ) ) || is_tax( 'download_category' ) || is_tax( 'download_tag' )   ) {
 				return true;
+		}
+
+	}
+
+	/**
+	 * Find a product by slug
+	 *
+	 * @param string $slug Slug to search by.
+	 * @param bool $link Optional. If true return the full HTML markup for a link. Default is false.
+	 * @param bool|string $link_text Optional. Can be used to overide default link text. Default is false, which uses post_title.
+	 *
+	 * @return WP_Post|null|string If post found, returns the WP_Post object, or the link as HTML.
+	 */
+	public static function product_by_slug( $slug, $link = false, $link_text = false ) {
+		$args = array(
+			'name' => $slug,
+			'post_type' => 'download',
+			'post_status' => 'publish',
+			'numberposts' => 1
+		);
+		$posts = get_posts( $args );
+
+		if ( $posts && isset( $posts[0] ) && is_a( $posts[0], 'WP_Post' ) )  {
+			$post = $posts[0];
+			if ( ! $link ) {
+				return $post;
+
+			}else{
+				return self::product_link( $post->ID, true, $link_text );
+			}
+
 		}
 
 	}
