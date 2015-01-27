@@ -1,14 +1,17 @@
 <?php
 /**
- * @TODO What this does.
+ * Class for the documentation.
  *
- * @package   @TODO
+ * @package   @cwp_theme
  * @author    Josh Pollock <Josh@JoshPress.net>
  * @license   GPL-2.0+
  * @link      
  * @copyright 2015 Josh Pollock
  */
 
+/**
+ * Class CWP_Docs
+ */
 class CWP_Docs {
 
 	/**
@@ -49,8 +52,5 @@ class CWP_Docs {
 
 		return $content;
 	}
-
-
-
 
 }
