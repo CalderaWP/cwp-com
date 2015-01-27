@@ -72,7 +72,6 @@
     "pods-framework/pods-json-api"                              : "*",
     "wpackagist-plugin/easy-digital-downloads"                  : "*",
     "wpackagist-plugin/log-viewer"                              : "*",
-    "wpackagist-plugin/caldera-forms"                           : "*",
     "wpackagist-theme/twentyfifteen"                            : "*",
     "wpackagist-theme/hemingway"                                : "*",
     "calderawp/caldera-easy-pods"                               : "*",
@@ -87,7 +86,8 @@
     "wpackagist-plugin/restricted-site-access"                  : "*",
     "shelob9/wp-migrate-db-pro-files-addon"                     : "*",
     "wpackagist-plugin/code-snippets-cpt"                       : "*",
-    "wpackagist-plugin/wordpress-seo"                           : "*"
+    "wpackagist-plugin/wordpress-seo"                           : "*",
+    "Desertsnowman/caldera-forms"                               : "*"
   },
   "require-dev" : {
     "wpackagist-plugin/log-deprecated-notices"              : "*",
