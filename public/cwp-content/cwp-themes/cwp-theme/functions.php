@@ -267,6 +267,25 @@ add_filter( 'pods_templates_post_template',
 );
 
 
+/**
+ * Make terms whose parent is the cf forms add-on term (6) part of the term group 42.
+ */
+add_action( 'edited_terms', 'cwp_theme_set_term_group', 10, 2 );
+    function cwp_theme_set_term_group( $term_id, $taxonomy ) {
+       if ( 'download_category' == $taxonomy ) {
+          $term = get_term_by( 'id', $term_id, $taxonomy );
+          if ( 6 == $term->parent || 6 == $term_id ) {
+             if ( 42 !== $term->term_group ) {
+                remove_action( 'edited_terms', 'cwp_theme_set_term_group' );
+                wp_update_term( $term_id, $taxonomy, array( 'term_group' => 42 ) );
+             }
+
+          }
+
+      }
+
+    }
+
 
 ?>
 

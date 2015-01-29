@@ -87,7 +87,8 @@
     "shelob9/wp-migrate-db-pro-files-addon"                     : "*",
     "wpackagist-plugin/code-snippets-cpt"                       : "*",
     "wpackagist-plugin/wordpress-seo"                           : "*",
-    "Desertsnowman/caldera-forms"                               : "*"
+    "Desertsnowman/caldera-forms"                               : "*",
+    "wpackagist-plugin/ultimate-coming-soon-page"               : "*"
   },
   "require-dev" : {
     "wpackagist-plugin/log-deprecated-notices"              : "*",
