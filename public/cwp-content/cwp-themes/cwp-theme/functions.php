@@ -238,5 +238,36 @@ add_action( 'init',
    },
 35 );
 
+/**
+ * Remove EDD's microdata on post title in the "After Download" Pods Template
+ */
+add_filter( 'pods_templates_pre_template',
+    function( $code, $template_name ) {
+       if ( 'After Download' == $template_name ) {
+          remove_filter( 'the_title', 'edd_microdata_title', 10, 2 );
+       }
+
+       return $code;
+
+    },
+ 10, 2 );
+
+/**
+ * Re-enable EDD's microdata on post title after running the "After Download" Pods Template
+ */
+add_filter( 'pods_templates_post_template',
+    function( $code, $template_name ) {
+      if ( 'After Download' == $template_name ) {
+         add_filter( 'the_title', 'edd_microdata_title', 10, 2 );
+      }
+
+       return $code;
+
+   }
+
+);
+
+
+
 ?>
 
