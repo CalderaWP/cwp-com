@@ -218,3 +218,10 @@
     padding: 4px; }
   .cwp-code-snippet pre {
     margin-top: 0px; }
+
+.section-inner {
+  margin-bottom: 100px; }
+
+.widget:last-child {
+  padding-bottom: 0px;
+  border-bottom: 1px solid #a3be5f; }

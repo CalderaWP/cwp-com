@@ -179,4 +179,13 @@ $cwp_green: #A3BE5F;
 
 }
 
+.section-inner {
+
+  margin-bottom: 100px;
+}
+
+.widget:last-child {
+  padding-bottom: 0px;
+  border-bottom: 1px solid $cwp_green;
+}
 
