@@ -194,7 +194,7 @@ function cwp_theme_get_edd_class() {
  * Randomize Caldera Answers Easy Pods results
  */
 add_filter( 'caldera_easy_pods_query_params', function( $params, $pod, $tags, $easy_pod_slug ) {
-   if ( 'caldera_answers' == $easy_pod_slug ) {
+   if ( 'caldera_answers' == $easy_pod_slug || 'answers_widget' == $easy_pod_slug ) {
       $params[ 'orderby' ] = 'rand()';
    }
 
