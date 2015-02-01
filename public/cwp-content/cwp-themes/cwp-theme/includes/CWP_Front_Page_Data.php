@@ -19,6 +19,19 @@ class CWP_Front_Page_Data {
 	protected static function front_page_feature_sections() {
 		return array(
 			array(
+				'title' => 'Elegant Solutions To Complex WordPress Problems',
+				'tagline' => 'WordPress Plugins',
+				'title_link' => '#',
+				'title_link_title' => 'Caldera Plugins: Complex Tasks Made Easy',
+				'background' => 9,
+				'background_style' => '',
+				'content' => array(
+
+				),
+				'easy_pod' => 'featured_products',
+				'easy_pod_wrap_class' => 'block-grid-3'
+			),
+			array(
 				'title' => 'Caldera Forms',
 				'tagline' => 'Responsive Form Builder',
 				'title_link' => get_permalink( 447 ),
@@ -31,19 +44,6 @@ class CWP_Front_Page_Data {
 						sprintf( 'Caldera Forms is a free plugin %1s. We also offer a full range of %2s, including payment processors and service integrations.', cwp_theme_cf_wporg_link( 'you can download from WordPress.org' ), CWP_Theme_EDD::caldera_form_add_on_link() )
 					)
 				)
-			),
-			array(
-				'title' => 'Other Plugins',
-				'tagline' => 'Complex Tasks Made Easy',
-				'title_link' => '#',
-				'title_link_title' => 'Caldera Plugins: Complex Tasks Made Easy',
-				'background' => 9,
-				'background_style' => '',
-				'content' => array(
-
-				),
-				'easy_pod' => 'featured_products',
-				'easy_pod_wrap_class' => 'block-grid-3'
 			),
 			array(
 				'title' => 'Caldera Answers',
