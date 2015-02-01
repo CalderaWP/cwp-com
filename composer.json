@@ -74,6 +74,10 @@
     {
       "type" : "git",
       "url"  : "https://bitbucket.org/calderadev/caldera-forms-mailchimp"
+    },
+    {
+      "type" : "git",
+      "url"  : "https://bitbucket.org/dlcramer/slidebars"
     }
   ],
   "require"     : {
@@ -102,7 +106,9 @@
     "Desertsnowman/caldera-forms"                               : "*",
     "wpackagist-plugin/ultimate-coming-soon-page"               : "*",
     "wpackagist-plugin/foobox-image-lightbox"                   : "*",
-    "wpackagist-plugin/login-lockdown"                          : "*"
+    "wpackagist-plugin/login-lockdown"                          : "*",
+    "wpackagist-plugin/foogallery"                              : "*",
+    "dlcramer/slidebars"                                        : "*"
   },
   "require-dev" : {
     "wpackagist-plugin/log-deprecated-notices"              : "*",
