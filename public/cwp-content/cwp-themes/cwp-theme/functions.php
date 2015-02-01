@@ -266,6 +266,18 @@ add_filter( 'pods_templates_post_template',
    }, 10, 2
 );
 
+/**
+ * Increase upload limits for admins
+ */
+add_filter( 'upload_size_limit', function( $limit ) {
+   if ( current_user_can( 'edit_options' ) ) {
+      return 8000000;
+
+   }
+
+   return $limit;
+
+});
 
 ?>
 

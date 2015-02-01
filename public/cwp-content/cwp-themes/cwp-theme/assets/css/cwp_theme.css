@@ -210,6 +210,23 @@
 .footer.section.large-padding.bg-dark {
   padding-top: 0; }
 
+ul#footer-menu li {
+  display: inline;
+  text-align: center;
+  margin: 8px; }
+  @media (max-width: 600px) {
+    ul#footer-menu li {
+      display: block; } }
+
+#footer-menu-wrap {
+  margin: 0 auto;
+  text-align: center;
+  display: table;
+  padding-top: 16px; }
+
+.footer-inner.section-inner {
+  margin-bottom: 18px; }
+
 .cwp-code-snippet {
   border: 1px solid black; }
   .cwp-code-snippet .code-snippet-description {

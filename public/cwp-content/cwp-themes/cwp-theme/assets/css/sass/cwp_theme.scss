@@ -162,6 +162,27 @@ $cwp_green: #A3BE5F;
   padding-top: 0;
 }
 
+ul#footer-menu {
+  li {
+    display: inline;
+    text-align: center;
+    margin: 8px;
+    @media (max-width: 600px) {
+      display: block;
+    }
+  }
+}
+
+#footer-menu-wrap {
+  margin: 0 auto;
+  text-align: center;
+  display: table;
+  padding-top: 16px;
+}
+
+.footer-inner.section-inner {
+  margin-bottom: 18px;
+}
 
 //syntax highlighter CPT
 .cwp-code-snippet {
@@ -188,4 +209,5 @@ $cwp_green: #A3BE5F;
   padding-bottom: 0px;
   border-bottom: 1px solid $cwp_green;
 }
+
 
