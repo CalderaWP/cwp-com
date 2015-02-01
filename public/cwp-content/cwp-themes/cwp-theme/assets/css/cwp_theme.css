@@ -547,17 +547,17 @@
 .slide_bar .panel-heading {
   background-color: #597516 !important; }
 .slide_bar .panel-body {
-  background-color: #CDE495 !important; }
+  background-color: #cde495 !important; }
 .slide_bar .caldera-grid .btn-default {
   background-color: #781720 !important;
   background-image: none;
   color: white; }
   .slide_bar .caldera-grid .btn-default:hover, .slide_bar .caldera-grid .btn-default:active {
-    background-color: #F9C7CC !important;
+    background-color: #f9c7cc !important;
     color: #781720; }
 
 .content {
-  background-color: #ffffff;
+  background-color: #cde495;
   border: 1px solid #a3be5f;
   padding: 5%; }
 
@@ -570,7 +570,7 @@
   padding: 0; }
 
 .front-page-feature {
-  background-color: #ffffff;
+  background-color: #cde495;
   border: 1px solid #a3be5f;
   padding: 5%;
   margin-bottom: 24px;
@@ -582,10 +582,10 @@
     display: inline-block;
     padding: 12px; }
     .front-page-feature .title-wrap h3 a {
-      color: #FAEBD7;
+      color: #e7f5c4;
       float: left; }
     .front-page-feature .title-wrap h3 span {
-      color: #a9a9a9;
+      color: #F9C7CC;
       float: right; }
     .front-page-feature .title-wrap h3 a, .front-page-feature .title-wrap h3 span {
       margin: 0px; }
@@ -611,11 +611,11 @@
     font-size: 1.75em;
     padding: 4px; }
 .blog-info .blog-description {
-  color: #fff4e0; }
+  color: #e7f5c4; }
 
 .widget {
   border: 1px solid #a3be5f;
-  background-color: #ffffff; }
+  background-color: #cde495; }
 
 @media (min-width: 700px) {
   .widget {
@@ -751,7 +751,7 @@ ul#footer-menu li {
 .cwp-code-snippet {
   border: 1px solid black; }
   .cwp-code-snippet .code-snippet-description {
-    background: #f5f5f5;
+    background: #e7f5c4;
     margin-bottom: 0px;
     padding: 4px; }
   .cwp-code-snippet pre {

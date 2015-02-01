@@ -5,8 +5,8 @@
  * Copyright (c) 2015 Josh Pollock
  * Licensed under the GPLv2+ license.
  */
-$cwp_green: #A3BE5F;
 
+@import "colors";
 @import "block_grid";
 @import "product-preview";
 @import "related-products";
@@ -14,8 +14,10 @@ $cwp_green: #A3BE5F;
 @import "about_box";
 @import "slidebars";
 
+
+
 @mixin general( $margin ) {
-  background-color: #ffffff;
+  background-color: $primaryTint1;
   border: 1px solid $cwp_green;
   padding: $margin;
 }
@@ -50,11 +52,11 @@ $cwp_green: #A3BE5F;
     padding: 12px;
     h3{
       a {
-        color: #FAEBD7;
+        color: $primaryTint2;
         float: left;
       }
       span {
-        color: #a9a9a9;
+        color: #F9C7CC;
         float: right;
       }
       a, span {
@@ -96,7 +98,7 @@ $cwp_green: #A3BE5F;
     }
   }
   .blog-description {
-    color:#fff4e0;
+    color:$primaryTint2;
   }
 
 }
@@ -105,7 +107,7 @@ $cwp_green: #A3BE5F;
 //Sidebar
 .widget {
   border: 1px solid $cwp_green;
-  background-color: #ffffff;
+  background-color: $primaryTint1;
 }
 @media (min-width: 700px) {
   .widget {
@@ -192,7 +194,7 @@ ul#footer-menu {
   border: 1px solid black;
 
   .code-snippet-description {
-    background: #f5f5f5;
+    background: $primaryTint2;
     margin-bottom: 0px;
     padding: 4px;
   }

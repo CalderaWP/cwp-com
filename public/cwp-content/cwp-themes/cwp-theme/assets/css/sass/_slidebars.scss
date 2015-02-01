@@ -4,11 +4,11 @@
   }
 
   .panel-heading {
-    background-color: #597516 !important;
+    background-color: $primaryShade2 !important;
   }
 
   .panel-body {
-    background-color: #CDE495 !important;
+    background-color: $primaryTint1 !important;
   }
 
   .caldera-grid .btn-default {
@@ -16,7 +16,7 @@
     background-image: none;
     color: white;
     &:hover, &:active {
-      background-color: #F9C7CC !important;
+      background-color: $secondary1Tint2 !important;
       color: #781720;
     }
 
