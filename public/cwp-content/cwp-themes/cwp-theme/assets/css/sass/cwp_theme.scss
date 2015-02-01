@@ -207,9 +207,28 @@ ul#footer-menu {
   margin-bottom: 100px;
 }
 
+//sidebar
 .widget:last-child {
   padding-bottom: 0px;
   border-bottom: 1px solid $cwp_green;
 }
+div#cwp-social-links {
+  ul li {
+    display: inline;
+    border: none;
+  }
 
+  .genericon {
+    font-size: 2em;
+    margin: .25em;
+  }
 
+  a:hover {
+    text-decoration: none;
+  }
+
+}
+
+.genericon:hover {
+  color: #000;
+}

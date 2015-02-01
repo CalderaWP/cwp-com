@@ -148,6 +148,8 @@ add_action( 'init', function() {
 
    include( dirname( __FILE__ ) . '/includes/CWP_Docs.php' );
 
+   include( dirname( __FILE__ ) . '/includes/CWP_Social.php' );
+
 });
 
 /**
@@ -314,62 +316,13 @@ function cwp_bio_shortcode( $atts, $content = '' ) {
  * @return string|void
  */
 function cwp_bio_box( $who, $bio ) {
-   $data['david'] = array(
-       'name'     => 'David Cramer',
-       'gravatar' => 'dlcramer@gmail.com',
-       'social'   => array(
-           'twitter'   => 'dcramer',
-           'github'    => 'Desertsnowman',
-           'wordpress' => 'desertsnowman',
-           'home'      => 'http://cramer.co.za/'
-       )
-   );
-
-   $data['josh'] = array(
-       'name'     => 'Josh Pollock',
-       'gravatar' => 'josh@joshpress.net',
-       'social'   => array(
-           'twitter'   => 'josh412',
-           'github'    => 'Shelob9',
-           'wordpress' => 'Shelob9',
-           'home'      => 'http://JoshPress.net'
-       )
-   );
-
-   if ( array_key_exists( $who, $data ) ) {
-      $data = $data[ $who ];
-
-   } else {
-      return;
-   }
-
+   $data = CWP_Social::our_data( $who );
 
    if ( is_array( $data ) ) {
       $name = $data['name'];
 
-      foreach ( $data[ 'social' ] as $network => $username ) {
-         $what = $network;
-         $link = '#';
-         if ( 'twitter' == $network ) {
-            $link = 'https://twitter.com/' . $username;
-         } elseif ( 'github' == $network ) {
-            $link = 'https://github.com/' . $username;
 
-         } elseif ( 'wordpress' == $network ) {
-            $link = 'https://profiles.wordpress.org/' . $username;
-            $what = 'WordPress.org Profile';
-         } elseif ( 'home' == $network ) {
-            $link = $username;
-            $what = 'website';
-         }
-
-         $social[] = sprintf(
-             '<a href="%1s" title="%2s\'s %3s" target="_blank"><span class="genericon genericon-%4s"></span></a>',
-             $link, $name, $what, $network
-         );
-      }
-
-      $social_html = implode( $social );
+      $social_html = CWP_Social::social_html( $data[ 'social' ], $name );
 
       $out[] = '<div class="about-box">';
       $out[] = sprintf( '<div class="about-left">%1s %2s</div>',

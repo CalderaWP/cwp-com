@@ -78,6 +78,10 @@
     {
       "type" : "git",
       "url"  : "https://bitbucket.org/dlcramer/slidebars"
+    },
+    {
+      "type" : "git",
+      "url"  : "https://github.com/Yoast/wordpress-seo"
     }
   ],
   "require"     : {
@@ -102,7 +106,7 @@
     "wpackagist-plugin/restricted-site-access"                  : "*",
     "shelob9/wp-migrate-db-pro-files-addon"                     : "*",
     "wpackagist-plugin/code-snippets-cpt"                       : "*",
-    "wpackagist-plugin/wordpress-seo"                           : "*",
+    "yoast/wordpress-seo"                                       : "*",
     "Desertsnowman/caldera-forms"                               : "*",
     "wpackagist-plugin/ultimate-coming-soon-page"               : "*",
     "wpackagist-plugin/foobox-image-lightbox"                   : "*",

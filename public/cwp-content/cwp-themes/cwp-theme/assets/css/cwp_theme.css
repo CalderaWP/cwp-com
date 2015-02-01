@@ -539,6 +539,8 @@
       text-underline: none; }
   .about-box img {
     width: 100%; }
+  .about-box a:hover {
+    text-decoration: none; }
 
 .content {
   background-color: #ffffff;
@@ -747,3 +749,15 @@ ul#footer-menu li {
 .widget:last-child {
   padding-bottom: 0px;
   border-bottom: 1px solid #a3be5f; }
+
+div#cwp-social-links ul li {
+  display: inline;
+  border: none; }
+div#cwp-social-links .genericon {
+  font-size: 2em;
+  margin: .25em; }
+div#cwp-social-links a:hover {
+  text-decoration: none; }
+
+.genericon:hover {
+  color: #000; }
