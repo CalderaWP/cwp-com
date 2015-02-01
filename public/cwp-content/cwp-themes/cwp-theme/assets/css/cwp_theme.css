@@ -542,6 +542,20 @@
   .about-box a:hover {
     text-decoration: none; }
 
+.slide_bar .sidebar {
+  width: 100%; }
+.slide_bar .panel-heading {
+  background-color: #597516 !important; }
+.slide_bar .panel-body {
+  background-color: #CDE495 !important; }
+.slide_bar .caldera-grid .btn-default {
+  background-color: #781720 !important;
+  background-image: none;
+  color: white; }
+  .slide_bar .caldera-grid .btn-default:hover, .slide_bar .caldera-grid .btn-default:active {
+    background-color: #F9C7CC !important;
+    color: #781720; }
+
 .content {
   background-color: #ffffff;
   border: 1px solid #a3be5f;
