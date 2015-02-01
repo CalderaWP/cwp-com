@@ -1,0 +1,5 @@
+@mixin general( $margin ) {
+  background-color: $primaryTint1;
+  border: 1px solid $cwp_green;
+  padding: $margin;
+}

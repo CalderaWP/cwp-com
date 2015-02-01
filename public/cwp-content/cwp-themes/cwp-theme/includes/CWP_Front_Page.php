@@ -41,9 +41,11 @@ class CWP_Front_Page extends CWP_Front_Page_Data {
 		$out[] = sprintf( '<div class="title-wrap">
 						<h3><a href="%1s" title="%2s">%3s</a> <span>%4s</span></h3>
 			</div><div class="clear"></div>', $data[ 'title_link' ], $data[ 'title_link_title' ], $data[ 'title' ], $data[ 'tagline' ] );
+
+		$content = false;
 		if ( isset( $data[ 'content' ][ 'p' ] ) ) {
 			foreach( $data[ 'content' ][ 'p' ] as $p ) {
-				$out[] = '<p>'.$p.'</p>';
+				$content[] = '<p>'.$p.'</p>';
 			}
 
 		}
@@ -54,7 +56,11 @@ class CWP_Front_Page extends CWP_Front_Page_Data {
 				$class = $data[ 'easy_pod_wrap_class' ];
 			}
 
-			$out[] = sprintf( '<div class="%1s">%2s</div><div class="clear"></div>', $class, cep_render_easy_pod( $data [ 'easy_pod' ] ) );
+			$content[] = sprintf( '<div class="%1s">%2s</div><div class="clear"></div>', $class, cep_render_easy_pod( $data [ 'easy_pod' ] ) );
+		}
+
+		if ( is_array( $content ) ) {
+			$out[] = sprintf( '<div class="front-page-feature-content">%1s</div>', implode( '', $content ) );
 		}
 
 		$style_tag = cwp_theme_background_style_tag( $data[ 'background' ], $data[ 'background_style' ] );

@@ -1,0 +1,46 @@
+//Sidebar
+.widget {
+  @include general( 5% );
+  background-color: $background;
+}
+
+@media (min-width: 700px) {
+  .widget {
+    padding: 15%;
+  }
+}
+
+@for $i from 1 through 12 {
+  .widget.widget_caldera_forms_widget.edd-widget {
+    .col-sm-#{$i} {
+      width: 100%;
+      display: block;
+    }
+  }
+  .live-gravatar {
+    display: none;
+  }
+
+}
+
+.widget:last-child {
+  padding-bottom: 0px;
+  border-bottom: 1px solid $cwp_green;
+}
+
+div#cwp-social-links {
+  ul li {
+    display: inline;
+    border: none;
+  }
+
+  .genericon {
+    font-size: 2em;
+    margin: .25em;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+}

@@ -7,24 +7,28 @@
  */
 
 @import "colors";
+@import "mixins";
 @import "block_grid";
 @import "product-preview";
 @import "related-products";
 @import "genericons/genericons";
 @import "about_box";
 @import "slidebars";
+@import "header";
+@import "sidebar";
+@import "menu";
+@import "front_page_features";
 
 
-
-@mixin general( $margin ) {
-  background-color: $primaryTint1;
-  border: 1px solid $cwp_green;
-  padding: $margin;
+body {
+  background-color: $primaryTint2;
 }
 
-//content general stylings
+
+//main layout
 .content {
   @include general( 5% );
+  background-color: white;
 }
 
 .featured-media {
@@ -33,161 +37,12 @@
   }
 }
 
-//front page
-.content.front-page-content {
-  background: none;
-  border: none;
-  padding: 0;
-}
+.section-inner {
 
-.front-page-feature {
-  @include general( 5% );
-  margin-bottom: 24px;
-  background-position-y: 0;
-  background-repeat: no-repeat;
-  .title-wrap {
-    background-color:rgba(0, 0, 0, 0.7);
-    width: 100%;
-    display: inline-block;
-    padding: 12px;
-    h3{
-      a {
-        color: $primaryTint2;
-        float: left;
-      }
-      span {
-        color: #F9C7CC;
-        float: right;
-      }
-      a, span {
-        margin: 0px;
-      }
-
-    }
-    @media (max-width: 600px) {
-      h3, h3 span {
-        display: block;
-      }
-      h3 span {
-        text-align: right;
-        margin-top: 10px;
-      }
-    }
-
-  }
-  p{
-    margin-bottom: 1.25em;
-    line-height: 1.5em;
-  }
-
-}
-
-//header
-.blog-info {
-  .blog-title  {
-    display: inline-block;
-    padding: 30px;
-    background: $cwp_green;
-    a {
-      background-color: rgba(0, 0, 0, 0.7);
-      text-transform: uppercase;
-      letter-spacing: 4px;
-      font-weight: 700;
-      font-size: 1.75em;
-      padding: 4px;
-    }
-  }
-  .blog-description {
-    color:$primaryTint2;
-  }
-
+  margin-bottom: 100px;
 }
 
 
-//Sidebar
-.widget {
-  border: 1px solid $cwp_green;
-  background-color: $primaryTint1;
-}
-@media (min-width: 700px) {
-  .widget {
-    padding: 15%;
-  }
-}
-
-@for $i from 1 through 12 {
-  .widget.widget_caldera_forms_widget.edd-widget {
-    .col-sm-#{$i} {
-      width: 100%;
-      display: block;
-    }
-  }
-  .live-gravatar {
-    display: none;
-  }
-
-}
-
-
-
-//menu
-.blog-menu a {
-  color: $cwp_green;
-}
-
-.blog-menu a:hover,
-.blog-menu .current-menu-item a { color: #FFF; }
-
-.blog-menu ul > .has-children::after,
-.blog-menu ul > .page_item_has_children::after {
-
-  border-left-color: rgba(255,255,255,0.4);
-
-}
-
-.blog-menu ul > .has-children:hover::after,
-.blog-menu ul > .page_item_has_children:hover::after { border-right-color: #FFF; }
-
-.blog-menu ul li {
-  background: #1d1d1d;
-}
-
-.blog-menu ul a {
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-}
-
-.blog-menu ul > li:last-child a { border-bottom-width: 0; }
-
-.blog-menu li:hover > ul {
-
-}
-
-//footer
-.footer.section.large-padding.bg-dark {
-  padding-top: 0;
-}
-
-ul#footer-menu {
-  li {
-    display: inline;
-    text-align: center;
-    margin: 8px;
-    @media (max-width: 600px) {
-      display: block;
-    }
-  }
-}
-
-#footer-menu-wrap {
-  margin: 0 auto;
-  text-align: center;
-  display: table;
-  padding-top: 16px;
-}
-
-.footer-inner.section-inner {
-  margin-bottom: 18px;
-}
 
 //syntax highlighter CPT
 .cwp-code-snippet {
@@ -205,33 +60,8 @@ ul#footer-menu {
 
 }
 
-.section-inner {
 
-  margin-bottom: 100px;
-}
-
-//sidebar
-.widget:last-child {
-  padding-bottom: 0px;
-  border-bottom: 1px solid $cwp_green;
-}
-div#cwp-social-links {
-  ul li {
-    display: inline;
-    border: none;
-  }
-
-  .genericon {
-    font-size: 2em;
-    margin: .25em;
-  }
-
-  a:hover {
-    text-decoration: none;
-  }
-
-}
 
 .genericon:hover {
-  color: #000;
+  color: $primaryShade2;
 }

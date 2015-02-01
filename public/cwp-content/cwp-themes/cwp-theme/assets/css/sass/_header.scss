@@ -1,0 +1,23 @@
+//header
+.blog-info {
+  .blog-title  {
+    display: inline-block;
+    padding: 30px;
+    background: $cwp_green;
+    a {
+      background-color: $primaryShade2;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-weight: 700;
+      font-size: 1.75em;
+      padding: 6px;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+  .blog-description {
+    color:$primaryTint2;
+  }
+
+}

@@ -12,12 +12,12 @@
   }
 
   .caldera-grid .btn-default {
-    background-color: #781720 !important;
+    background-color: $secondary1Shade2 !important;
     background-image: none;
     color: white;
     &:hover, &:active {
       background-color: $secondary1Tint2 !important;
-      color: #781720;
+      color: $secondary1Shade2;
     }
 
   }
