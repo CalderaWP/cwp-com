@@ -101,7 +101,8 @@
     "wpackagist-plugin/wordpress-seo"                           : "*",
     "Desertsnowman/caldera-forms"                               : "*",
     "wpackagist-plugin/ultimate-coming-soon-page"               : "*",
-    ""
+    "wpackagist-plugin/foobox-image-lightbox"                   : "*",
+    "wpackagist-plugin/login-lockdown"                          : "*"
   },
   "require-dev" : {
     "wpackagist-plugin/log-deprecated-notices"              : "*",
