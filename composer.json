@@ -62,6 +62,18 @@
     {
       "type" : "git",
       "url"  : "https://bitbucket.org/shelob9/wp-migrate-db-pro-files-addon"
+    },
+    {
+      "type" : "git",
+      "url"  : "https://bitbucket.org/calderadev/caldera-custom-login"
+    },
+    {
+     "type"  : "git",
+      "url"  : "https://bitbucket.org/calderadev/cf-users"
+    },
+    {
+      "type" : "git",
+      "url"  : "https://bitbucket.org/calderadev/caldera-forms-mailchimp"
     }
   ],
   "require"     : {
@@ -88,7 +100,8 @@
     "wpackagist-plugin/code-snippets-cpt"                       : "*",
     "wpackagist-plugin/wordpress-seo"                           : "*",
     "Desertsnowman/caldera-forms"                               : "*",
-    "wpackagist-plugin/ultimate-coming-soon-page"               : "*"
+    "wpackagist-plugin/ultimate-coming-soon-page"               : "*",
+    ""
   },
   "require-dev" : {
     "wpackagist-plugin/log-deprecated-notices"              : "*",
