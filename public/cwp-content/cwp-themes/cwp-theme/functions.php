@@ -279,5 +279,18 @@ add_filter( 'upload_size_limit', function( $limit ) {
 
 });
 
+/**
+ * Make a account/purchases/checkout pages a login or register form if not logged in or registered.
+ */
+add_filter( 'the_content', function( $content )  {
+   global $post;
+   if ( ! is_user_logged_in() && is_a( $post, 'WP_POST' ) && in_array( $post->ID, array( 4,5,6,7,) ) ) {
+      $content = Caldera_Forms::render_form( 'CF54cdab1e3d906' );
+   }
+
+   return $content;
+
+});
+
 ?>
 
