@@ -10,6 +10,8 @@ $cwp_green: #A3BE5F;
 @import "block_grid";
 @import "product-preview";
 @import "related-products";
+@import "genericons/genericons";
+@import "about_box";
 
 @mixin general( $margin ) {
   background-color: #ffffff;

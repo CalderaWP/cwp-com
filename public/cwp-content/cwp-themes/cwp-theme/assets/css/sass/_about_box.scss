@@ -1,0 +1,26 @@
+.about-box {
+  margin-bottom: 12px;
+  .about-left {
+    display: inline;
+    float: left;
+    margin-right: 3%;
+  }
+  .about-right {
+    display: inline;
+    float: left;
+    width: 66%;
+    margin-bottom: 40px;
+  }
+  .genericon {
+    font-size: 1.5em;
+    a:hover{
+      border-bottom: none;
+      text-underline: none;
+    }
+
+  }
+
+  img {
+    width: 100%;
+  }
+}
