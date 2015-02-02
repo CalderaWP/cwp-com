@@ -345,9 +345,3 @@ function cwp_bio_box( $who, $bio ) {
 
 }
 
-
-
-
-
-?>
-
