@@ -683,7 +683,7 @@ div#cwp-social-links a:hover {
 
 .blog-menu a:hover,
 .blog-menu .current-menu-item a {
-  color: #1d1d1d; }
+  color: #fcfdf7; }
 
 .blog-menu ul > .has-children::after,
 .blog-menu ul > .page_item_has_children::after {
@@ -711,6 +711,7 @@ div#cwp-social-links a:hover {
   background-color: #cde495;
   border: 1px solid #a3be5f;
   padding: 5%;
+  background-color: #e7f5c4;
   margin-bottom: 24px;
   background-position-y: 0;
   background-repeat: no-repeat; }
@@ -739,26 +740,39 @@ div#cwp-social-links a:hover {
     padding: 12px; }
   .front-page-feature .front-page-feature-content {
     background-color: rgba(231, 245, 196, 0.5); }
-  .front-page-feature .product-preview .block-grid-item {
+  .front-page-feature .product-preview {
     background-color: #fcfdf7; }
-  .front-page-feature .product-preview .product-tagline {
-    text-align: center; }
+    .front-page-feature .product-preview .product-tagline {
+      text-align: center; }
   @media (min-width: 600px) {
     .front-page-feature .product-preview.block-grid-item:first-child {
-      margin-left: 0px; }
+      margin-left: 0px;
+      margin-right: 0px; }
     .front-page-feature .product-preview.block-grid-item:last-child {
-      margin-right: 0px; } }
+      margin-right: 0px;
+      margin-right: 0px;
+      float: right; }
+    .front-page-feature .product-preview.block-grid-item {
+      margin: 0 1.75%; } }
   @media (max-width: 600px) {
+    .front-page-feature img {
+      overflow: hidden;
+      max-width: 98%;
+      border-top: 3px solid #fcfdf7; }
     .front-page-feature .product-preview.block-grid-item {
       width: 100%;
       height: auto;
       float: none;
       border: none;
       margin-bottom: 12px;
-      border-bottom: 1px solid #e7f5c4; }
+      border-bottom: 6px solid #e7f5c4; }
+      .front-page-feature .product-preview.block-grid-item:first-child img {
+        border-top: none; }
     .front-page-feature h5 {
       font-size: 2em;
       padding-top: 1em; }
+    .front-page-feature .product-preview {
+      background-color: #e7f5c4; }
     .front-page-feature a {
       color: #597516; }
       .front-page-feature a:visited {

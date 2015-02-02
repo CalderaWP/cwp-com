@@ -7,6 +7,7 @@
 
 .front-page-feature {
   @include general(5%);
+  background-color: $primaryTint2;
   margin-bottom: 24px;
   background-position-y: 0;
   background-repeat: no-repeat;
@@ -51,10 +52,7 @@
   }
 
   .product-preview {
-    .block-grid-item {
-      background-color: $white;
-    }
-
+    background-color: $white;
     .product-tagline {
       text-align: center;
     }
@@ -64,25 +62,45 @@
   @media (min-width: 600px) {
     .product-preview.block-grid-item:first-child {
       margin-left: 0px;
+      margin-right: 0px;
     }
     .product-preview.block-grid-item:last-child {
       margin-right: 0px;
+      margin-right: 0px;
+      float: right;
+    }
+    .product-preview.block-grid-item {
+      margin: 0 1.75%;
     }
 
   }
 
   @media (max-width: 600px) {
+    img {
+      overflow: hidden;
+      max-width: 98%;
+      border-top: 3px solid $white;
+
+    }
+
     .product-preview.block-grid-item {
       width: 100%;
       height: auto;
       float: none;
       border: none;
       margin-bottom: 12px;
-      border-bottom: 1px solid $primaryTint2;
+      border-bottom: 6px solid $primaryTint2;
+      &:first-child img {
+        border-top: none;
+      }
     }
     h5 {
       font-size: 2em;
       padding-top: 1em;
+    }
+
+    .product-preview {
+      background-color: $primaryTint2;
     }
 
 
