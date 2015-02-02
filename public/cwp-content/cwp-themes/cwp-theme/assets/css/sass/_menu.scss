@@ -1,7 +1,10 @@
 
 //menu
-.blog-menu a {
+.blog-menu {
   color: $cwp_green;
+  a {
+    color: $cwp_green;
+  }
 }
 
 .blog-menu a:hover,
