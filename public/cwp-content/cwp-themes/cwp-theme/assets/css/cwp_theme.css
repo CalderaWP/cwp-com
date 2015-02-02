@@ -678,8 +678,8 @@ div#cwp-social-links .genericon {
 div#cwp-social-links a:hover {
   text-decoration: none; }
 
-.footer.section.large-padding.bg-dark {
-  padding-top: 0; }
+.footer.section.bg-dark {
+  padding: 0; }
 
 ul#footer-menu li {
   display: inline;
@@ -815,9 +815,6 @@ body {
 
 .featured-media a, .featured-media img {
   width: 100%; }
-
-.section-inner {
-  margin-bottom: 100px; }
 
 .cwp-code-snippet {
   border: 1px solid black; }
