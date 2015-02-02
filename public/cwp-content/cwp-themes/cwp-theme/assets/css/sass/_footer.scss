@@ -24,3 +24,11 @@ ul#footer-menu {
 .footer-inner.section-inner {
   margin-bottom: 18px;
 }
+
+.credits-inner.section-inner {
+  color: $white;
+  a {
+    color: $primaryShade1;
+    &:hover { color: $primaryTint1; }
+  }
+}

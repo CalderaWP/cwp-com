@@ -698,6 +698,13 @@ ul#footer-menu li {
 .footer-inner.section-inner {
   margin-bottom: 18px; }
 
+.credits-inner.section-inner {
+  color: #fcfdf7; }
+  .credits-inner.section-inner a {
+    color: #7e9a37; }
+    .credits-inner.section-inner a:hover {
+      color: #cde495; }
+
 .blog-menu {
   color: #a3be5f; }
   .blog-menu a {
