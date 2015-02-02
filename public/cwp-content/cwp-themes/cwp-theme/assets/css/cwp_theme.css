@@ -707,20 +707,22 @@ ul#footer-menu li {
   background-color: #cde495;
   border: 1px solid #a3be5f;
   padding: 5%;
-  background-color: #e7f5c4;
+  background-color: #fcfdf7;
   margin-bottom: 24px;
   background-position-y: 0;
   background-repeat: no-repeat; }
+  .front-page-feature a {
+    color: #597516; }
   .front-page-feature .title-wrap {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: #522b6e;
     width: 100%;
     display: inline-block;
     padding: 12px; }
     .front-page-feature .title-wrap h3 a {
-      color: #e7f5c4;
+      color: #fcfdf7;
       float: left; }
     .front-page-feature .title-wrap h3 span {
-      color: #f9c7cc;
+      color: #fcfdf7;
       float: right; }
     .front-page-feature .title-wrap h3 a, .front-page-feature .title-wrap h3 span {
       margin: 0px; }

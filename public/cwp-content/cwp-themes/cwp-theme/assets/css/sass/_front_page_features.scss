@@ -7,22 +7,23 @@
 
 .front-page-feature {
   @include general(5%);
-  background-color: $primaryTint2;
+  background-color: $white;
   margin-bottom: 24px;
   background-position-y: 0;
   background-repeat: no-repeat;
+  a { color: $primaryShade2; }
   .title-wrap {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: $secondary2Shade2;
     width: 100%;
     display: inline-block;
     padding: 12px;
     h3 {
       a {
-        color: $primaryTint2;
+        color: $white;
         float: left;
       }
       span {
-        color: $secondary1Tint2;
+        color: $white;
         float: right;
       }
       a, span {
