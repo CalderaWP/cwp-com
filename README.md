@@ -28,4 +28,3 @@ To deploy, git clone this then run composer update.
 Copyright 2014-2015 by [Josh Pollock](http://JoshPress.net) & [CalderaWP LLC](https://calderawp.com).
 
 Licensed under the terms of the [GNU General Public License version 2](http://www.gnu.org/licenses/gpl-2.0.html) or later. Please share with your neighbor.
-
