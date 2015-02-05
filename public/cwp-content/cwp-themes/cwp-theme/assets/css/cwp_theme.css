@@ -834,3 +834,8 @@ body {
 
 .genericon:hover {
   color: #597516; }
+
+.post-content a {
+  color: #597516 !important; }
+  .post-content a:hover {
+    color: #a3be5f !important; }

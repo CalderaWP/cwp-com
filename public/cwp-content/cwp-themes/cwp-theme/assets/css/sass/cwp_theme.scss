@@ -56,3 +56,10 @@ body {
 .genericon:hover {
   color: $primaryShade2;
 }
+
+
+.post-content a {
+  color: $primaryShade2 !important;
+  &:hover {
+    color: $primary !important;}
+}
