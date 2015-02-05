@@ -61,18 +61,19 @@
   }
 
   @media (min-width: 600px) {
+    .product-preview.block-grid-item {
+      margin: 0;
+      width: 30%;
+    }
     .product-preview.block-grid-item:first-child {
-      margin-left: 0px;
-      margin-right: 0px;
+      margin-left: 0;
+      margin-right: 5%;
     }
     .product-preview.block-grid-item:last-child {
-      margin-right: 0px;
-      margin-right: 0px;
+      margin-right: 0;
       float: right;
     }
-    .product-preview.block-grid-item {
-      margin: 0 1.75%;
-    }
+
 
   }
 

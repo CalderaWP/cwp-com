@@ -776,15 +776,15 @@ ul#footer-menu li {
     .front-page-feature .product-preview .product-tagline {
       text-align: center; }
   @media (min-width: 600px) {
-    .front-page-feature .product-preview.block-grid-item:first-child {
-      margin-left: 0px;
-      margin-right: 0px; }
-    .front-page-feature .product-preview.block-grid-item:last-child {
-      margin-right: 0px;
-      margin-right: 0px;
-      float: right; }
     .front-page-feature .product-preview.block-grid-item {
-      margin: 0 1.75%; } }
+      margin: 0;
+      width: 30%; }
+    .front-page-feature .product-preview.block-grid-item:first-child {
+      margin-left: 0;
+      margin-right: 5%; }
+    .front-page-feature .product-preview.block-grid-item:last-child {
+      margin-right: 0;
+      float: right; } }
   @media (max-width: 600px) {
     .front-page-feature img {
       overflow: hidden;
