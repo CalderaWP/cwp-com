@@ -78,6 +78,10 @@
     {
       "type" : "git",
       "url"  : "https://bitbucket.org/dlcramer/slidebars"
+    },
+    {
+      "type" : "git",
+      "url"  : "https://github.com/CalderaWP/Caldera-Affiliates"
     }
   ],
   "require"     : {
@@ -107,7 +111,8 @@
     "wpackagist-plugin/foobox-image-lightbox"                   : "*",
     "wpackagist-plugin/login-lockdown"                          : "*",
     "wpackagist-plugin/foogallery"                              : "*",
-    "dlcramer/slidebars"                                        : "*"
+    "dlcramer/slidebars"                                        : "*",
+    "calderawp/caldera-affiliates"                              : "*"
   },
   "require-dev" : {
     "wpackagist-plugin/log-deprecated-notices"              : "*",
