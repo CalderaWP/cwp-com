@@ -22,4 +22,31 @@ $secondary2Tint2: #B5A0C5;
 $white : #FCFDF7;
 $black : #1d1d1d;
 $background: $white;
-$cwp_green: $primary;
+
+//new based on new logos
+
+$cwp_green: #A3BE60;
+$dark_green: #7D923B;
+$alt_light: #0A7A6F;
+$alt_dark: #0E4C45;
+$dark: #404041;
+
+$highlight: #6073BE;
+$accent: #AA60BE;
+$gray: #8F8F8F;
+$white: #F6F9F0;
+
+$primary : $cwp_green;
+$secondary1 : $accent;
+$secondary2 : $highlight;
+
+$secondary1Shade1 : darken( $secondary1, 20% );
+$secondary1Shade2 : darken( $secondary1, 40% );
+$secondary1Tint1 : lighten( $secondary1, 20% );
+$secondary1Tint2: lighten( $secondary1, 40% );
+
+$secondary2Shade1 : darken( $secondary2, 20% );
+$secondary2Shade2 : darken( $secondary2, 40% );
+$secondary2Tint1 : lighten( $secondary2, 20% );
+$secondary2Tint2: lighten( $secondary2, 40% );
+

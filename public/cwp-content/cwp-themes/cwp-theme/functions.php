@@ -42,15 +42,22 @@ add_action( 'after_setup_theme', 'cwp_theme_setup' );
 function cwp_theme_scripts_styles() {
    wp_deregister_style('hemingway_style' );
 
-   wp_enqueue_style( 'hemingway_style', get_template_directory_uri() . "/style.css" );
-
    $postfix = ( defined( 'SCRIPT_DEBUG' ) && true === SCRIPT_DEBUG ) ? '' : '.min';
 
    wp_enqueue_script( 'cwp_theme', get_stylesheet_directory_uri() . "/assets/js/cwp_theme{$postfix}.js", array(), CWP_THEME_VERSION, true );
 
    wp_localize_script( 'cwp_theme', 'cwp_theme', array( 'adminajax' => admin_url( 'admin-ajax.php') ) );
 
-   wp_enqueue_style( 'cwp_theme', get_stylesheet_directory_uri() . "/assets/css/cwp_theme{$postfix}.css", array(), CWP_THEME_VERSION );
+
+
+   if ( is_single( ) && in_array( get_post_type(), array( 'free_plugin', 'download' ) ) ) {
+      wp_enqueue_style( 'plugin-page', get_stylesheet_directory_uri() . "/assets/css/plugin-page.css" );
+      wp_enqueue_style( 'bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css' );
+      wp_enqueue_style( 'google-fonts-plugin-page', '//fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' );
+   }else{
+      wp_enqueue_style( 'cwp_theme', get_stylesheet_directory_uri() . "/assets/css/cwp_theme{$postfix}.css", array(), CWP_THEME_VERSION );
+      wp_enqueue_style( 'hemingway_style', get_template_directory_uri() . "/style.css" );
+   }
 
 
 
@@ -345,3 +352,22 @@ function cwp_bio_box( $who, $bio ) {
 
 }
 
+/**
+ * Use the "plugins-page.php" page for single posts in download and free_plugin
+ *
+ * @uses "template_include"
+ */
+add_filter( 'template_include', function ( $template ) {
+   if ( is_single( ) && in_array( get_post_type(), array( 'free_plugin', 'download' ) ) ) {
+      $new_template = locate_template( array( 'plugins-page.php' ) );
+      if ( file_exists( $new_template ) && '' != $new_template ) {
+         include( dirname( __FILE__ ) . '/includes/CWP_Plugin_Page.php' );
+         $template = $new_template;
+      }
+
+      return $template;
+
+   }
+
+   return $template;
+}, 99 );

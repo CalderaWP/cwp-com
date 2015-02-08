@@ -3,7 +3,7 @@ module.exports = function( grunt ) {
 
 	// Load all grunt tasks
 	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
-
+	grunt.loadNpmTasks('grunt-uncss');
 
 	grunt.loadNpmTasks('grunt-git');
 
@@ -69,7 +69,8 @@ module.exports = function( grunt ) {
 		sass:   {
 			all: {
 				files: {
-					'assets/css/cwp_theme.css': 'assets/css/sass/cwp_theme.scss'
+					'assets/css/cwp_theme.css': 'assets/css/sass/cwp_theme.scss',
+					'assets/css/plugin-page.css': 'assets/css/sass/plugin-page.scss'
 				}
 			}
 		},

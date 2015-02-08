@@ -19,7 +19,7 @@
 @import "footer";
 @import "menu";
 @import "front_page_features";
-
+@import "social";
 
 body {
   background-color: $primaryTint2;
@@ -38,7 +38,7 @@ body {
 }
 
 //syntax highlighter CPT
-.cwp-code-snippet {
+.cwp-code-snippet  {
   border: 1px solid black;
 
   .code-snippet-description {
@@ -52,11 +52,6 @@ body {
   }
 
 }
-
-.genericon:hover {
-  color: $primaryShade2;
-}
-
 
 .post-content a {
   color: $primaryShade2 !important;

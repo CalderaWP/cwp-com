@@ -1,0 +1,20 @@
+div#cwp-social-links {
+  ul li {
+    display: inline;
+    border: none;
+  }
+
+  .genericon {
+    font-size: 2em;
+    margin: .25em;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+}
+
+.genericon:hover {
+  color: $primaryShade2;
+}

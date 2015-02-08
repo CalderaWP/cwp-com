@@ -2,9 +2,15 @@
 /**
  * Content dir/url
  */
+if ( WP_LOCAL_DEV ) {
+	$protocol = 'http://';
+}else{
+	$protocol = 'https://';
+}
+
 define( 'CONTENT_DIR', '/cwp-content' );
 define( 'WP_CONTENT_DIR', WP_WEBROOT_DIR . CONTENT_DIR );
-define( 'WP_CONTENT_URL', 'https://' . $_SERVER['HTTP_HOST'] . '/public' . CONTENT_DIR );
+define( 'WP_CONTENT_URL', $protocol . $_SERVER['HTTP_HOST'] . '/public' . CONTENT_DIR );
 
 /**
  * DB info common to both configs

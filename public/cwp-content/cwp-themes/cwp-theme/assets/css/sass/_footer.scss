@@ -1,4 +1,40 @@
-//footer
+.footer {
+  font-size: 0.9em;
+  margin-top: 7.5%;
+}
+
+.column {
+  width: 30%;
+  margin-left: 5%;
+}
+
+.column:first-child { margin-left: 0; }
+
+
+/* Footer widgets --------------------------------------- */
+
+
+.footer .widget { border-bottom-color: rgba(255,255,255,0.1) }
+
+.footer .widget-title { color: #EEE; letter-spacing: 1px; font-weight: 600; }
+
+.footer .widget-content { color: #666; }
+
+.footer .widget-content ul li { border-top-color: rgba(255,255,255,0.1); }
+
+.footer .widget-content > ul > li:first-child { border-top: none; }
+
+
+/* Widget search --------------------------------------- */
+
+
+.footer .widget_search #s:focus {
+  outline: none;
+  background: #FFF;
+  border-color: #DDD;
+  color: #444;
+}
+
 .footer.section.bg-dark {
   padding: 0;
 }
